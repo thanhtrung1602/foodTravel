@@ -1,0 +1,16 @@
+:root {
+    --primary-color: ;
+    --black-color: #000;
+    --text-color: #333;
+    --white-color: #fff;
+    --invalid-color: #f33a58;
+    --desc-color: #0000008a;
+    --first-color: ;
+    --second-color: ;
+    --button-color: ;
+    --system-ui: system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+html {
+    font-family: var(--system-ui);
+}
