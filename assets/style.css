@@ -8,9 +8,41 @@
     --first-color: ;
     --second-color: ;
     --button-color: ;
+    --text: 1.6rem;
     --system-ui: system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+.flex-sing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 html {
     font-family: var(--system-ui);
+}
+
+.banner-section img{
+    width: 100%;
+}
+
+.navbar{
+    margin: 10px 8rem;
+}
+
+.category-ul{
+    border: 1px solid;
+    font-size: var(--text);
+}
+.category-ul__list{
+    padding: 25px;
+}
+
+.category-ul__list img{
+    width: 100%;
+}
+
+.category-ul__list a{
+    text-decoration: none;
+    color: #333;
 }
