@@ -83,3 +83,8 @@ html {
     margin-left: 10px;
     border-radius: 10px;
 }
+.header-hr {
+    background-color: black;
+    width: 100%;
+    height: 1px;
+}
