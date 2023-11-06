@@ -17,13 +17,11 @@ html {
 /* Sang header  */
 .app{
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
 }
 .header {
     display: flex;
+    height: 60px;
     align-items: center;
-    /* justify-content: space-around; */
     justify-content: center;
 }
 .logo {
@@ -58,8 +56,6 @@ html {
 .dangky {
     margin-left: 25px;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 .icon-sign-in {
