@@ -15,12 +15,9 @@ html {
     font-family: var(--system-ui);
 }
 /* Sang header  */
-.app{
-    display: flex;
-}
 .header {
     display: flex;
-    height: 60px;
+    height: 66px;
     align-items: center;
     justify-content: center;
 }
