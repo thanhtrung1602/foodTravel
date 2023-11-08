@@ -414,6 +414,7 @@ header{
 }
 footer{
   background-color: var(--first-color);
+  margin-top: 20px;
 }
 
 .footer-header img{
@@ -424,7 +425,7 @@ footer{
 .footer{
   display: flex;
   justify-content: space-between;
-  margin: 10px 4rem;
+  margin: 10px 4rem 0 4rem;
 }
 
 .footer-ul {
@@ -433,4 +434,8 @@ footer{
 
 .footer-item{
   padding: 10px 0;
+}
+
+.footer-item a {
+  color: #0FA7ED;
 }
