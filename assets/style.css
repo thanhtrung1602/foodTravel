@@ -412,3 +412,26 @@ header{
     font-size: 1.2rem;
     margin: 10px 0;
 }
+footer{
+  background-color: var(--first-color);
+}
+
+.footer-header img{
+  width: 10%;
+  margin: 10px 4rem;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 4rem;
+}
+
+.footer-ul {
+  margin: 10px 0;
+}
+
+.footer-item{
+  padding: 10px 0;
+>>>>>>> Tuan
+}
