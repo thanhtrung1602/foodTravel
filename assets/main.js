@@ -1,17 +1,18 @@
 // xu li like anh 
 
-var like = document.querySelectorAll('.fa-thumbs-up');
-var likeNumber = document.querySelector('.like-icon');
-likeNumber = 1
-console.log()
+const likes = document.querySelectorAll('.fa-thumbs-up');
+const likeNumbers = document.querySelectorAll('.like-icon');
+let  numLikes = document.querySelectorAll('.numLike')
+likes.forEach(function(like, index) {
+    let numLike = likeNumbers[index]
+    let likeNum = likeNumbers[index]
 
-like.onclick = (e) => {
-    let htmlLike = likeNumber ++;
-    this.style.color = "#1877F2";
-    
-    // console.log(event.target.this)
-    
-    // console.log(this)
-    document.querySelector('.numLike').innerHTML = htmlLike
-    
-}
+    likeNum = 0
+    like.onclick = () => {
+        if (like.style.color === "rgb(128, 128, 128)" || like.style.color === "#808080") {
+            like.style.color = "#1877F2"
+            likeNum ++;
+        } 
+        numLike.innerHTML = likeNum
+    }
+})
