@@ -201,6 +201,47 @@ header{
     padding: 10px 0;
 }
 
+.product-top {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 200px;
+    display: flex;
+    opacity: 0;
+    border-radius: 15px;
+    background-color: #FFBA47;
+}
+
+.overlay-img img{
+    width: 80px;
+    height: 100%;
+}
+
+.overlay-text {
+    font-size: 1rem;
+    color: #FF5B44;
+}
+
+.product-top:hover .product-img {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.product-top:hover .overlay {
+    position: absolute;
+    transition: 0.5s;
+    opacity: 1;
+    top: 50px;
+    left: 30px;
+}
+
 .user-comment{
     display: flex;
     border: 1px solid var(--first-color);
