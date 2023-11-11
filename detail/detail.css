@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #FF5B44;
+    --black-color: #000;
+    --text-color: #333;
+    --white-color: #fff;
+    --invalid-color: #f33a58;
+    --desc-color: #0000008a;
+    --gray-color: #666;
+    --first-color: #D9D9D9;
+    --second-color: #808080;
+    --button-color: ;
+    --text: 1rem;
+    --system-ui: system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+html {
+    font-family: var(--system-ui);
+}
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Sang header  */
+
+header{
+    width: 100%;
+    border-bottom: 1px solid #e8ebed;
+}
+
+.header {
+    display: flex;
+    margin: 0 4rem;
+    height: 66px;
+    align-items: center;
+    justify-content: center;
+}
+.logo, .select-box, .box-food-hot, .input-seach, .dangky, .quoc-ki{
+    flex: 1 1;
+}
+.logo {
+    object-fit: contain;
+    width: 50px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.select-box {
+    border: none;
+    width: 90px;
+}
+.box-food-hot, .dangky {
+    display: flex;
+    justify-content: center;
+}
+.icon-food-hot {
+    color: red;
+}
+.input-seach {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-seach input{
+    border-radius: 15px;
+    width: 400px;
+    height: 30px;
+    padding: 0 20px;
+    border: 1px solid #e8e8e8;
+}
+.input-seach i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.icon-sign-in {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.fa-cart-shopping {
+    color: #FF5B44;
+    margin-bottom: 10px;
+    display: flex !important;
+    justify-content: center !important; 
+}
+
+.fa-bell {
+    color: #FFBA47;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+
+.hr {
+    background-color: #666;
+    margin-left: 10px;
+    height: 40px;
+    width: 1px;
+}
+.quoc-ki {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.quoc-ki img {
+    height: 27px;
+    width: 42px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
