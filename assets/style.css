@@ -24,7 +24,10 @@ html {
 }
 a{
     text-decoration: none   ;
+    color: var(--text-color);
+
 }
+
 
 /* Sang header  */
 
@@ -45,11 +48,11 @@ header{
 }
 .logo {
     object-fit: contain;
-    width: 50px;
-    height: 80px;
+    width: 50%;
+    height: 60px;
     flex-shrink: 0;
     display: flex;
-    align-items: centergi;
+    align-items:center;
     justify-content: flex-start;
 }
 .select-box {
@@ -111,7 +114,7 @@ header{
 .quoc-ki {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .quoc-ki img {
     height: 27px;
