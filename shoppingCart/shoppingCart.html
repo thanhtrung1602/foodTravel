@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="./detail.css">
+    <link rel="stylesheet" href="./shoppingCart.css">
     <link rel="stylesheet" href="/base/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,17 +75,22 @@
                             </div>
     
                             <div class="nav-middle">
-                                <div class="btn-right">Mở cửa</div>
-                                <div class="btn-left">Đóng cửa</div>
+                                <span>Món ăn: </span>
+                                <span>Bún đậu mắn tôm</span>
                             </div>
     
-                            <div class="nav-price">
-                                <span>30,000 VND</span>
+                            <div class="quantity">
+                                <span>Số lượng: </span>
+                                <div class="plus">
+                                    <span> - </span>
+                                    <span>1</span>
+                                    <span>+</span>
+                                </div>
                             </div>
     
                             <div class="nav-bottom">
-                                <button class="order">Đặt hàng</button>
-                                <p>Thanh toán online giảm 50k từ đơn 150k</p>
+                                <span>Giá tiền: </span>
+                                <span>30.000 VND</span>
                             </div>
                         </div>
                     </div>
@@ -95,141 +100,64 @@
         <main>
             <section class="main">
                 <article>
-                    <h2>Các món bạn cũng sẽ thích</h2>
-                    <div class="food">
-                        <ul class="food-ul flex-box">
-                            <li class="food-item">
-                                <a href="">
-                                    <div class="food-travel">
-                                        <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
-                                        </div>
-                                        <div class="food-name">
-                                            <span>Cơm chiên nước mắt</span>
-                                        </div>
-                                        <div class="food-price">
-                                            <span>35,000 VND</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="food-item">
-                                <a href="">
-                                                                        <div class="food-travel">
-                                        <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
-                                        </div>
-                                        <div class="food-name">
-                                            <span>Cơm chiên nước mắt</span>
-                                        </div>
-                                        <div class="food-price">
-                                            <span>35,000 VND</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="food-item">
-                                <a href="">
-                                                                        <div class="food-travel">
-                                        <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
-                                        </div>
-                                        <div class="food-name">
-                                            <span>Cơm chiên nước mắt</span>
-                                        </div>
-                                        <div class="food-price">
-                                            <span>35,000 VND</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="food-item">
-                                <a href="">
-                                                                        <div class="food-travel">
-                                        <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
-                                        </div>
-                                        <div class="food-name">
-                                            <span>Cơm chiên nước mắt</span>
-                                        </div>
-                                        <div class="food-price">
-                                            <span>35,000 VND</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="comment">
-                        <h2>Đánh giá</h2>
-                        <div class="comment-detail">
-                            <div class="writer-comment">
-    
-                                <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
-                                </div>
-                                <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
-                                    </div>
-    
-                                    <div class="inp-comment">
-                                        <input type="text" name="writer" id="" placeholder="Đánh giá món ăn...">
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="done-comment">
-                                <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
-                                </div>
-                                <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
-                                    </div>
-    
-                                    <div class="inp-comment">
-                                        <p>Nhìn đã thấy ngon rồi mới ăn 1 lần đã muốn ăn lần thứ 2</p>
-                                    </div>
-
-                                    <div class="time-comment">
-                                        <span>1 ngày trước</span>
-                                        <span><i class="fa-solid fa-thumbs-up"></i></span>
-                                    </div>
-                                </div>
+                    <div class="form-address">
+                        <h2>Thông tin nhận hàng</h2>
+                        <div class="sex">
+                            <div class="male">
+                                <input type="radio" name="sex" id=""> 
+                                <label for="">Nam</label>
                             </div>
 
-                            <div class="done-comment">
-                                <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
-                                </div>
-                                <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
-                                    </div>
-    
-                                    <div class="inp-comment">
-                                        <p>Nhìn đã thấy ngon rồi mới ăn 1 lần đã muốn ăn lần thứ 2</p>
-                                    </div>
-
-                                    <div class="time-comment">
-                                        <span>1 ngày trước</span>
-                                        <span><i class="fa-solid fa-thumbs-up"></i></span>
-                                    </div>
-                                </div>
+                            <div class="female">
+                                <input type="radio" name="sex" id="">
+                                <label for="">Nữ</label>
                             </div>
                         </div>
+                        <div class="form-inp">
+                            <div class="name-voucher">
+                                <input type="text" name="" id="" placeholder="Họ và tên">
+                                <input type="text" name="" id="" placeholder="Nhập voucher">
+                            </div>
+
+                            <div class="form-middle">
+                                <div class="left-inp">
+                                    <input type="text" name="" id="" placeholder="Số điện thoại">
+                                    <input type="text" name="" id="" placeholder="Nhập địa chỉ nhà, tên đường">
+                                    <input type="text" name="" id="" placeholder="Nhập ghi chú nếu có">
+                                </div>
+
+                                <div class="right-total">
+                                    <div class="food-price">
+                                        <span>Tiền món ăn</span>
+                                        <span>30.000 VND</span>
+                                    </div>
+
+                                    <div class="food-transport">
+                                        <span>Vận chuyển: </span>
+                                        <span>20.000 VND</span>
+                                    </div>
+
+                                    <div class="food-voucher">
+                                        <span>Voucher</span>
+                                        <span>-20.000 VND</span>
+                                    </div>
+
+                                    <div class="food-total">
+                                        <span>Tổng</span>
+                                        <span>30.000 VND</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button class="order">Đặt hàng</button>
+                        </div>
                     </div>
-
-
                 </article>
             </section>
         </main>
-        <!-- Tuan -->
         <footer>
             <div class="footer-header">
-                <img src="/img/logo/logo_main.png" alt="">
+                <img src="./img/logo/logo_main.png" alt="">
             </div>
             <section class="footer">
               <div class="footer-left">
@@ -339,6 +267,5 @@
             </section>
         </footer>
     </div>
-    <script src="./assets/main.js"></script>
 </body>
 </html>

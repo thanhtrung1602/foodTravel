@@ -145,25 +145,27 @@ header{
 
 .nav-middle {
     display: flex;
-    margin: 20px 0;
+    flex-direction: column;
+    margin: 20px 0 10px;
 }
 
-.btn-right {
-    border: 1px solid;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-right: 5px;
-    background-color: #3FC145;
-    color: var(--white-color);
+.nav-middle span:nth-child(1) {
+    color: var(--black-color);
+    font-weight: 500;
 }
 
-.btn-left {
-    border: 1px solid;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-left: 5px;
-    background-color: #808080;
-    color: var(--white-color);
+.nav-middle span:nth-child(2) {
+    margin: 5px 0;
+    color: var(--gray-color);
+}
+
+.quantity {
+    display: flex;
+    margin: 0 0 10px;
+}
+
+.plus {
+    margin: 0 20px;
 }
 
 .nav {
@@ -193,84 +195,97 @@ header{
 }
 
 .nav-bottom {
-    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 0 0 65%;
+    font-size: 18px;
 }
 
-.main  {
+.nav-bottom span:nth-child(2) {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.main {
     margin: 10px 4rem;
 }
 
-.food-img img {
-    width: 100%;
+.form-address {
+    width: 50%;
 }
-
-.food-item {
-    margin: 10px 10px;
+input {
+    background-color: var(--first-color);
+    border: none;
+    border-radius: 5px;
 }
-
-.comment {
-    position: relative;
-}
-
-.comment h2{ 
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: var(--white-color);
-    font-size: 20px;
-    font-weight: 500;
-    z-index: 1;
-}
-
-.comment-detail {
-    position: relative;
-    border-top: 40px solid var(--primary-color);
-    border-bottom: 40px solid var(--primary-color);
-    border-right: 25px solid var(--primary-color);
-    border-left: 25px solid var(--primary-color);
-    border-radius: 20px;
-    border-radius: 20px;
-}
-
-.writer-comment {
+.sex{
     display: flex;
+    margin: 10px 0;
 }
 
-.done-comment {
+.male {
+    margin-right: 20px;
+}
+
+.name-voucher {
+    margin: 10px 0;
     display: flex;
+    justify-content: space-between;
 }
 
-.inp-avatar {
-    height: 40px;
-    width: 40px;
+.name-voucher input:nth-child(1){
+    padding: 10px 120px 10px 15px;
+
+}
+.food-price span:nth-child(1){
+    margin-right: 20px;
+}
+.food-transport{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
-.inp-avatar img{
-    margin: 10px 10px;
-    border-radius: 50%;
-    width: 100%;
-    padding-right: 10px;
+.food-voucher {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
-.inp-name{
-    margin: 10px 20px;
+.food-total  {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    border-top: 1px solid;
+    padding-top: 10px;
 }
 
-.inp-comment {
-    margin: 5px 0;
+.form-middle {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
-.time-comment span:nth-child(2){
-    margin-left: 10px;
+.left-inp {
+    display: flex;
+    flex-direction: column;
 }
-.time-comment span {
-    margin-bottom: 10px;
+
+.left-inp input{
+    margin: 10px 0;
 }
-.inp-comment input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid;
+
+.left-inp input:nth-child(1) {
+    padding: 10px 120px 10px 15px;
+}
+
+.left-inp input:nth-child(2) {
+    padding: 10px 120px 10px 15px;
+}
+
+.left-inp input:nth-child(3) {
+    padding: 10px 120px 10px 15px;
 }
 
 footer{
