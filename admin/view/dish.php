@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="main--wrapper">
-            <div class="table--container">
+            <div class="table--container">  
                     <form action="index.php?pg=adddish" method="post">
                         <div>
                             <h4>Mã: </h4>
