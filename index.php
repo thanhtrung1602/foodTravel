@@ -3,7 +3,7 @@
     include_once './model/monan.php';
     include_once "view/header.php";
     $dssp = getall_dish();
-    echo var_dump($dssp);
+    // echo var_dump($dssp);
     if(isset($_GET['page'])&&($_GET['page'])) {
         $page = $_GET['page'];
         switch ($page) {
@@ -11,7 +11,11 @@
                 include_once 'view/home.php';
                 break;
             case 'detail':
-                require_once '/view/detail.php';
+                if (isset($_GET['id']) && ($_GET['id']>0)) {
+                    $id = $_GET['id'];
+                    $detail = getId($id);
+                };
+                include_once 'view/detail.php';
                 break;
             default:
                 $dssp = getall_dish();

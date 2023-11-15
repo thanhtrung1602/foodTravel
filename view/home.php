@@ -47,16 +47,16 @@
                             <?php 
                                 foreach ($dssp as $item) {
                                     extract($item);
-                                    $linkDetail = 'index.php?page=detail';
+                                    $linkDetail = 'index.php?page=detail&id='.$id;
                                     echo '
                                         <li class="product-ul__item">
                                             <div class="product-top">
                                                 <a href="'.$linkDetail.'">
                                                     <div class="product-img">
-                                                        <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                        <img src="layout/img/sanpham/'.$img.'" alt="product com chien" loading="lazy">
                                                     </div>
                                                     <div class="product-name__adress">
-                                                        <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                        <span>'.$name.'</span>
                                                         <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
                                                     </div>
                                                 </a>

@@ -9,6 +9,17 @@
         $conn = null;
         return $dssp;
     }
+
+    function getId($id){
+        $conn = db();
+        $sql = "SELECT * FROM dish WHERE id=".$id;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $dssp = $stmt->fetch();
+        return $dssp;
+    }
+
     function deldish($id){
         $conn= db();
         $sql = "DELETE FROM dish WHERE id=".$id;

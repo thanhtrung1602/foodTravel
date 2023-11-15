@@ -1,15 +1,20 @@
+<?php
+    if (isset($detail)) {
+        extract($detail);
+    }
+?>
         <!-- Trung, Huy -->
         <nav>
             <section class="navbar">
                 <article>
                     <div class="nav">
                         <div class="nav-left">
-                            <img src="/img/sanpham/bun-dau.jpeg" alt="">
+                            <img src="./img/sanpham/<?=$img?>" alt="">
                         </div>
     
                         <div class="nav-right">
                             <div class="nav-top">
-                                <h2>Bún đậu cô 3, ít bún nhiều đậu</h2>
+                                <h2><?=$name?></h2>
                                 <span>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nhuận</span>
                             </div>
     
@@ -41,7 +46,7 @@
                                 <a href="">
                                     <div class="food-travel">
                                         <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
+                                            <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
                                         <div class="food-name">
                                             <span>Cơm chiên nước mắt</span>
@@ -56,7 +61,7 @@
                                 <a href="">
                                                                         <div class="food-travel">
                                         <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
+                                            <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
                                         <div class="food-name">
                                             <span>Cơm chiên nước mắt</span>
@@ -71,7 +76,7 @@
                                 <a href="">
                                                                         <div class="food-travel">
                                         <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
+                                            <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
                                         <div class="food-name">
                                             <span>Cơm chiên nước mắt</span>
@@ -86,7 +91,7 @@
                                 <a href="">
                                                                         <div class="food-travel">
                                         <div class="food-img">
-                                            <img src="/img/sanpham/com-chien.jpeg" alt="">
+                                            <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
                                         <div class="food-name">
                                             <span>Cơm chiên nước mắt</span>
@@ -106,7 +111,7 @@
                             <div class="writer-comment">
     
                                 <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
+                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
                                 </div>
                                 <div class="inp-name">
                                     <div class="name-comment">
@@ -121,7 +126,7 @@
     
                             <div class="done-comment">
                                 <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
+                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
                                 </div>
                                 <div class="inp-name">
                                     <div class="name-comment">
@@ -141,7 +146,7 @@
 
                             <div class="done-comment">
                                 <div class="inp-avatar">
-                                    <img src="/img/avatar-user/tom jack.jpg" alt="">
+                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
                                 </div>
                                 <div class="inp-name">
                                     <div class="name-comment">

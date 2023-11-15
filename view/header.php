@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./layout/assets/reset.css">
     <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
-    <link rel="stylesheet" href="/layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/detail/detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
