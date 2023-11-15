@@ -214,7 +214,7 @@ header{
 
 .comment h2{ 
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 10px;
     color: var(--white-color);
     font-size: 20px;
