@@ -11,7 +11,7 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="view/layout/img/logo_main.png" alt="">
+            <img src="../img/logo/logo_main.png" alt="">
         </div>
         <ul class="menu">
             <li>

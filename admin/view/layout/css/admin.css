@@ -81,7 +81,7 @@ body{
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border-radius: 20%;
+    border-radius: 50%;
     /* background-color: red; */
 }
 .main--wrapper .header--wrapper .user--info img{
@@ -131,7 +131,7 @@ body{
 
 .main--wrapper{
     width: 100%;
-    height: 500px;
+    min-height: 500px ;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -177,4 +177,10 @@ form{
     cursor: pointer;
     border-radius: 20%;
     /* background-color: red; */
+}
+.form--nhap thead tr  th{
+    height: 60px;
+}
+.form--nhap thead tr th input{
+    width: 70px;
 }
