@@ -9,13 +9,13 @@
                 <article>
                     <div class="nav">
                         <div class="nav-left">
-                            <img src="./img/sanpham/<?=$img?>" alt="">
+                            <img src="layout/img/sanpham/<?=$img?>" alt="">
                         </div>
     
                         <div class="nav-right">
                             <div class="nav-top">
                                 <h2><?=$name?></h2>
-                                <span>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nhuận</span>
+                                <span><?=$address?></span>
                             </div>
     
                             <div class="nav-middle">
@@ -24,11 +24,18 @@
                             </div>
     
                             <div class="nav-price">
-                                <span>30,000 VND</span>
+                                <span><?=$price?></span>
                             </div>
     
                             <div class="nav-bottom">
-                                <button class="order">Đặt hàng</button>
+                                <form action="index.php?page=addCart" method="post">
+                                    <input type="hidden" name="id" value="<?=$id?>">
+                                    <input type="hidden" name="img" id="" value="<?=$img?>">
+                                    <input type="hidden" name="name" id="" value="<?=$name?>">
+                                    <input type="hidden" name="address" id="" value="<?=$address?>">
+                                    <input type="hidden" name="price" id="" value="<?=$price?>">
+                                    <input type="submit" name="sub" value="Đặt hàng"  class="order">
+                                </form>
                                 <p>Thanh toán online giảm 50k từ đơn 150k</p>
                             </div>
                         </div>

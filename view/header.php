@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
     <link rel="stylesheet" href="./layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
@@ -19,7 +20,7 @@
         <!-- Sang -->
         <header>
             <div class="header">
-                <img class="logo" src="img/logo/logo_main.png" alt="">
+                <img class="logo" src="layout/img/logo/logo_main.png" alt="">
                 <div class="select-container">
                     <select name="" id="" class="select-box">
                         <option value="">Khu Vực</option>
@@ -57,8 +58,8 @@
                     
                 </div>
                 <div class="quoc-ki">
-                    <img src="img/logo/quoc-kyVN.png" alt="">
-                    <img src="img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
+                    <img src="layout/img/logo/quoc-kyVN.png" alt="">
+                    <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
                 </div> 
             </div> 
         </header>
