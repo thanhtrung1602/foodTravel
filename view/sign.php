@@ -36,7 +36,7 @@
                         }
                         ?>
                         <div class="form-user">
-                            <input type="text" name="username" id="" placeholder="Họ và tên">
+                            <input type="text" name="username" id="" placeholder="Nhập tài khoản">
                         </div>
         
                         <div class="form-pass">
