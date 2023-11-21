@@ -18,5 +18,22 @@
         // use exec() because no results are returned
         $conn->exec($sql);
     }
+    function checkuser($username,$password) {
+        $conn=connectdb();
+        $stmt = $conn->prepare("SELECT * FROM user WHERE name='".$username."' AND password='".$password."'");
+        $stmt ->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $kq = $stmt->fetchAll();
+        if(count($kq)>0) return $kq[0]['role'];
+        else return 0;
+    }
+    function getuserinfo($username,$password) {
+        $conn=connectdb();
+        $stmt = $conn->prepare("SELECT * FROM user WHERE name='".$username."' AND password='".$password."'");
+        $stmt ->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $kq = $stmt->fetchAll();
+        return $kq;
+    }
 
 ?>
