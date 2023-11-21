@@ -3,9 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 18, 2023 lúc 06:52 AM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +27,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `bill` (
   `id` int(10) NOT NULL,
   `date` date NOT NULL,
-  `totalPayment` double NOT NULL,
+  `totalPayment` double(10,3) NOT NULL,
   `id_user` int(10) NOT NULL,
   `id_eatery` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -80,7 +77,7 @@ CREATE TABLE `comment` (
 CREATE TABLE `detail` (
   `id` int(10) NOT NULL,
   `quantity` int(20) NOT NULL,
-  `totalPayment` double NOT NULL,
+  `totalPayment` double(10,3) NOT NULL,
   `id_dish` int(10) NOT NULL,
   `id_bill` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -95,10 +92,18 @@ CREATE TABLE `dish` (
   `id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL,
   `img` varchar(50) NOT NULL,
-  `price` double NOT NULL,
+  `price` double(10,3) NOT NULL,
   `id_eatery` int(10) NOT NULL,
   `id_catalog` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+-- Đang đổ dữ liệu cho bảng `dish`
+--
+
+INSERT INTO `dish` (`id`, `name`, `img`, `price`, `id_eatery`, `id_catalog`) VALUES
+(1, 'Bún đậu cô 3, ít bún nhiều đậu', 'bun-dau.jpeg', 100.000, 4, 1),
+(2, 'Cơm trộn Hàn Quốc', 'com-tron.jpeg', 30.000, 5, 1),
+(3, 'Phở Hà Nội xưa', 'pho-hanoi.jpg', 30.000, 5, 1),
+(4, 'xôi', 'xoi-chien.jpg', 25.000, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -147,6 +152,11 @@ INSERT INTO `user` (`id`, `name`, `sdt`, `password`, `address`, `point`, `role`)
 (3, 'huy', 0, '123', '3/3 quận 3', 0, 1),
 (4, 'sang', 0, '123', '4/4 quận 4', 0, 1),
 (5, 'tuan', 0, '123', '', 0, 1);
+INSERT INTO `user` (`id`, `name`, `sdt`, `address`, `point`, `role`) VALUES
+(1, 'Nguyễn Thành Trung', 1010101, '1/1 quận 1', 0, 0),
+(2, 'Lê Minh Thịnh', 2020202, '2/2 quận 2', 0, 0),
+(3, 'Nguyễn Văn GIa Huy', 3030303, '3/3 quận 3', 0, 0),
+(4, 'Nguyễn Minh Sang', 4040404, '4/4 quận 4', 0, 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -232,7 +242,8 @@ ALTER TABLE `detail`
 -- AUTO_INCREMENT cho bảng `dish`
 --
 ALTER TABLE `dish`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 
 --
 -- AUTO_INCREMENT cho bảng `eatery`
@@ -244,7 +255,8 @@ ALTER TABLE `eatery`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

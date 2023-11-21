@@ -18,7 +18,7 @@
         <!-- Sang -->
         <header>
             <div class="header">
-                <img class="logo" src="img/logo/logo_main.png" alt="">
+                <a href="index.php?pg=home"><img class="logo" src="img/logo/logo_main.png" alt=""></a>
                 <div class="select-container">
                     <select name="" id="" class="select-box">
                         <option value="">Khu Vực</option>
