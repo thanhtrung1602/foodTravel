@@ -49,3 +49,19 @@ function checkForm() {
 sub.onclick = function () {
     return checkForm();
 }
+
+let sl = $('.num-item');
+let plus = $('.plus');
+let minus = $('.minus');
+plus.onclick = function () {
+    sl ++;
+    $('.numQuality').innerHTML = sl;
+    console.log(sl)
+    console.log(this)
+}
+
+minus.onclick = function () {
+    sll --;
+    $('.numQuality').innerHTML = sl;
+}
+

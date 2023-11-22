@@ -1,3 +1,17 @@
+<!-- <style>
+    .quality {
+        display: flex;
+        border: none;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    } -->
+
+    <!-- .plus {
+        margin: 0;
+    }
+</style> -->
+
 <?php
     if (isset($_SESSION['cart'])){
         // echo var_dump($_SESSION['cart']);
@@ -5,6 +19,16 @@
 <nav>
     <section class="navbar">
         <article>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Hình ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
                 <?php
                     $i = 0;
                     $tong = 0;
@@ -14,43 +38,22 @@
                         $tong += $thanhtien;
                         $linkDel = 'index.php?page=delCart&ind='.$i;
                         echo '
-                            <div class="nav">
-                                <div class="nav-left">
-                                    <img src="layout/img/sanpham/'.$sp[2].'" alt="">
-                                </div>
-                
-                                <div class="nav-right">
-                                    <div class="nav-top">
-                                        <h2>'.$sp[1].'</h2>
-                                        <span></span>
-                                    </div>
-                
-                                    <div class="nav-middle--item">
-                                        <span>Món ăn: </span>
-                                        <span>Bún đậu mắn tôm</span>
-                                    </div>
-                
-                                    <div class="quantity">
-                                        <span>Số lượng: </span>
-                                        <div class="plus">
-                                            <span> - </span>
-                                            <span>1</span>
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-                
-                                    <div class="nav-bottom--left">
-                                        <span>Giá tiền: </span>
-                                        <span>'.number_format($sp[3]).'</span>
-                                    </div>
-
-                                    <button><a href="'.$linkDel.'">xoa</a></button>
-                                </div>
-                            </div>
-                        ';
-                        $i++;
-                    }
-                ?>
+                            <tbody>
+                                <tr>
+                                    <td><h2>'.$sp[1].'</h2></td>
+                                    <td><img src="layout/img/sanpham/'.$sp[2].'" alt=""></td>
+                                    <td class="quality">
+                                        <span class="numQuality">'.$sp[5].'</span>
+                                    </td>
+                                    <td><span class="total">'.number_format($thanhtien).'</span></td>
+                                    <td><button><a href="'.$linkDel.'">xoa</a></button></td>
+                                </tr>
+                            </tbody>
+                            ';
+                            $i++;
+                        }
+                        ?>
+                </table>
         </article>
     </section>
 </nav>
@@ -104,11 +107,12 @@
     
                                 <div class="food-total">
                                     <span>Tổng</span>
-                                    <span><?=$thanhtien?></span>
+                                    <span><?=number_format($tong,0,",",".")?></span>
                                 </div>
     
                             </div>
                         </div>
+                        <input type="hidden" name="id" value="<?=$sp[0]?>">
                         <input type="submit" value="Đặt hàng" name="sub" class="order">
                     </div>
                 </form>
@@ -117,6 +121,28 @@
     </section>
 </main>
 <script src="layout/shoppingCart/shoppingCart.js"></script>
+<!-- <script>
+    const  $ = document.querySelector.bind(document);
+    let sl = $('.num-item');
+    let plus = $('.plus');
+    let minus = $('.minus');
+    sl = 1;
+    plus.onclick = function () {
+        Number()
+        sl ++;
+        let total = $('.total');
+
+        
+        $('.numQuality').innerHTML = sl;
+        console.log(sl)
+        console.log(this)
+    }
+
+    minus.onclick = function () {
+        sl --;
+        $('.numQuality').innerHTML = sl;
+    }
+</script> -->
 <?php
     }
 ?>

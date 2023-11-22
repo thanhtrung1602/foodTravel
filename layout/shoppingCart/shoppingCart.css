@@ -261,6 +261,23 @@ input {
     padding: 10px 120px 10px 15px;
 
 }
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+border: 1px solid;
+padding: 10px 40px;
+text-align: center;
+}
+
+td img {
+    width: 100%;
+    max-width: 25%;
+}
+
 .food-price span:nth-child(1){
     margin-right: 20px;
 }

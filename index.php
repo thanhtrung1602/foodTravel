@@ -28,32 +28,34 @@
             case 'cart':
                 include_once 'view/cart.php';
                 break;
-            case 'addCart':
-                if(!isset($_SESSION['cart'])) {
-                    $_SESSION['cart'] = [];
-                };
-                if (isset($_POST['sub']) && ($_POST['sub'])) {
-                    $id = $_POST['id'];
-                    $name = $_POST['name'];
-                    $img = $_POST['img'];
-                    $price = $_POST['price'];
-                    $address = $_POST['address'];
-                    $sp = [$id, $name, $img, $price, $address, $sl];
+                case 'addCart':
+                    if(!isset($_SESSION['cart'])) {
+                        $_SESSION['cart'] = [];
+                    };
+                    if (isset($_POST['sub']) && ($_POST['sub'])) {
+                        $id = $_POST['id'];
+                        $name = $_POST['name'];
+                        $img = $_POST['img'];
+                        $price = $_POST['price'];
+                        $address = $_POST['address'];
+                        $sl = 1;
+                        $sp = [$id, $name, $img, $price, $address, $sl];
 
-                    $_SESSION['cart'][] = $sp;
+                        $_SESSION['cart'][] = $sp;
 
-                    header('location:index.php?page=cart');
-                }
-                // include_once 'view/cart.php';
-                break;
+                        header('location:index.php?page=cart');
+                    }
+                    // include_once 'view/cart.php';
+                    break;
             case 'addBill': 
                 if (isset($_POST['sub']) && (isset($_POST['sub']))) {
                     $nameUser = $_POST['nameUser'];
                     $phone = $_POST['phone'];
                     $addressUser = $_POST['addressUser'];
                     $note = $_POST['note'];
+                    $id_dish = $_POST['id'];
 
-                    addBill($nameUser, $phone, $addressUser, $note);
+                    addBill($nameUser, $phone, $addressUser, $note, $id_dish);
                 }
                 $dssp = getall_dish(1);
                 break;

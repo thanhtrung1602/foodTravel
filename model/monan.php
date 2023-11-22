@@ -33,9 +33,9 @@
         $conn->exec($sql);
     }
 
-    function addBill($nameUser, $phone, $addressUser, $note){
+    function addBill($nameUser, $phone, $addressUser, $note, $id_dish){
         $conn = db();
-        $sql = "INSERT INTO test (nameUser, phone, addressUser, note) values ('$nameUser', '$phone', '$addressUser', '$note')";
+        $sql = "INSERT INTO test (nameUser, phone, addressUser, note, id_dish) values ('$nameUser', '$phone', '$addressUser', '$note', '$id_dish')";
         $conn -> exec($sql);
     }
 ?>
