@@ -3,9 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 16, 2023 lúc 12:54 PM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -99,8 +96,6 @@ CREATE TABLE `dish` (
   `id_eatery` int(10) NOT NULL,
   `id_catalog` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
 -- Đang đổ dữ liệu cho bảng `dish`
 --
 
@@ -141,6 +136,7 @@ CREATE TABLE `user` (
   `id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL,
   `sdt` int(15) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `address` varchar(50) NOT NULL,
   `point` double NOT NULL,
   `role` tinyint(1) DEFAULT 0
@@ -150,6 +146,12 @@ CREATE TABLE `user` (
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
+INSERT INTO `user` (`id`, `name`, `sdt`, `password`, `address`, `point`, `role`) VALUES
+(1, 'trung', 0, '123', '1/1 quận 1', 0, 1),
+(2, 'thinh', 0, '123', '2/2 quận 2', 0, 1),
+(3, 'huy', 0, '123', '3/3 quận 3', 0, 1),
+(4, 'sang', 0, '123', '4/4 quận 4', 0, 1),
+(5, 'tuan', 0, '123', '', 0, 1);
 INSERT INTO `user` (`id`, `name`, `sdt`, `address`, `point`, `role`) VALUES
 (1, 'Nguyễn Thành Trung', 1010101, '1/1 quận 1', 0, 0),
 (2, 'Lê Minh Thịnh', 2020202, '2/2 quận 2', 0, 0),
@@ -241,7 +243,6 @@ ALTER TABLE `detail`
 --
 ALTER TABLE `dish`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT cho bảng `eatery`
 --
