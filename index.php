@@ -38,6 +38,7 @@
                     $img = $_POST['img'];
                     $price = $_POST['price'];
                     $address = $_POST['address'];
+                    $sl = 1;
                     $sp = [$id, $name, $img, $price, $address, $sl];
 
                     $_SESSION['cart'][] = $sp;
@@ -52,8 +53,9 @@
                     $phone = $_POST['phone'];
                     $addressUser = $_POST['addressUser'];
                     $note = $_POST['note'];
+                    $id_dish = $_POST['id'];
 
-                    addBill($nameUser, $phone, $addressUser, $note);
+                    addBill($nameUser, $phone, $addressUser, $note, $id_dish);
                 }
                 $dssp = getall_dish(1);
                 break;
