@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="main--content">
         <div class="header--wrapper">
             <div class="header--title">
@@ -18,7 +14,7 @@
         </div>
         <div class="main--wrapper">
             <div class="table--container">  
-            <form action="index.php?pg=adddm" method="post">
+            <form action="index.php?page=adddm" method="post">
         <input type="text" name="tendm" id="">
         <input type="submit" name="themmoi" value="Thêm mới">
     </form>
@@ -42,7 +38,7 @@
                                         <td>'.$dm['tendm'].'</td>
                                         <td>'.$dm['uutien'].'</td>
                                         <td>'.$dm['hienthi'].'</td>
-                                        <td><a href="index.php?pg=updatedmform&id='.$dm['id'].'">Sửa</a>|<a href="index.php?pg=deletedm&id='.$dm['id'].'">Xóa</a></td>
+                                        <td><a href="index.php?page=updatedmform&id='.$dm['id'].'">Sửa</a>|<a href="index.php?page=deletedm&id='.$dm['id'].'">Xóa</a></td>
                                     </tr>';
                                 $i++;
                                 }

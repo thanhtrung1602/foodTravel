@@ -32,8 +32,6 @@
         $kq=$stmt->fetchAll();
         return $kq;
 
-        
-        return $kq;
     }
 
     
