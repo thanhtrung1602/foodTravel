@@ -44,64 +44,12 @@
                 <div class="nav-product">
                     <div class="products">
                         <ul class="product-ul flex-box">
-                            <?php 
                             
-                            foreach ($dssp as $item) {
-                                extract($item);
-                                    $linkDetail = 'index.php?page=detail&id='.$id;
-                                    echo '
-                                        <li class="product-ul__item">
-                                            <div class="product-top">
-                                                <a href="'.$linkDetail.'">
-                                                    <div class="product-img">
-                                                        <img src="layout/img/sanpham/'.$img.'" alt="product com chien" loading="lazy">
-                                                    </div>
-                                                    <div class="product-name__adress">
-                                                        <span>'.$name.'</span>
-                                                        // <p>address</p>
-                                                    </div>
-                                                </a>
-                                                    <div class="user-comment">
-                                                        <div class="user-comment__avatar">
-                                                            <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                        </div>
-                                                        <div class="comment-right">
-                                                            <div class="user-commet__name">
-                                                                <span>Nguyễn Thành Trung</span>
-                                                            </div>
-                                                            <div class="user-comment__title">
-                                                                <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-evaluate flex-box">
-                                                        <div class="evaluate flex-box">
-                                                            <div class="comment">
-                                                                <i class="fa-solid fa-message"></i>
-                                                                <span class="comment-icon">0</span>
-                                                            </div>
-                                                            <div class="like">
-                                                                <i class="fa-solid fa-thumbs-up"></i>
-                                                                <!-- <i class="bi bi-hand-thumbs-up-fill"></i> -->
-                                                                <span class="like-icon"><span class="numLike">0</span></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="save">
-                                                            <i class="fa-solid fa-bookmark"></i>
-                                                            <span class="bookmark-icon">Lưu</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </li>                   
-                                    ';
-                                }
-                            ?>
-
-                            <!-- <li class="product-ul__item">
+                            <li class="product-ul__item">
                                 <div class="product-top">
                                     <a href="">
                                         <div class="product-img">
-                                            <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                            <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                         </div>
                                         <div class="product-name__adress">
                                             <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -110,7 +58,51 @@
                                     </a>
                                         <div class="user-comment">
                                             <div class="user-comment__avatar">
-                                                <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                            </div>
+                                            <div class="comment-right">
+                                                <div class="user-commet__name">
+                                                    <span>Nguyễn Thành Trung</span>
+                                                </div>
+                                                <div class="user-comment__title">
+                                                    <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-evaluate flex-box">
+                                            <div class="evaluate flex-box">
+                                                <div class="comment">
+                                                    <i class="fa-solid fa-message"></i>
+                                                    <span class="comment-icon">0</span>
+                                                </div>
+                                                <div class="like">
+                                                    <i class="fa-solid fa-thumbs-up"></i>
+                                                    <!-- <i class="bi bi-hand-thumbs-up-fill"></i> -->
+                                                    <span class="like-icon"><span class="numLike">0</span></span>
+                                                </div>
+                                            </div>
+                                            <div class="save">
+                                                <i class="fa-solid fa-bookmark"></i>
+                                                <span class="bookmark-icon">Lưu</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+
+                            <li class="product-ul__item">
+                                <div class="product-top">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                        </div>
+                                        <div class="product-name__adress">
+                                            <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                            <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                        </div>
+                                    </a>
+                                        <div class="user-comment">
+                                            <div class="user-comment__avatar">
+                                                <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                             </div>
                                             <div class="comment-right">
                                                 <div class="user-commet__name">
@@ -145,7 +137,7 @@
                                 <div class="product-top">
                                     <a href="">
                                         <div class="product-img">
-                                            <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                            <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                         </div>
                                         <div class="product-name__adress">
                                             <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -154,7 +146,7 @@
                                     </a>
                                         <div class="user-comment">
                                             <div class="user-comment__avatar">
-                                                <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                             </div>
                                             <div class="comment-right">
                                                 <div class="user-commet__name">
@@ -189,7 +181,7 @@
                                 <div class="product-top">
                                     <a href="">
                                         <div class="product-img">
-                                            <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                            <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                         </div>
                                         <div class="product-name__adress">
                                             <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -198,7 +190,7 @@
                                     </a>
                                         <div class="user-comment">
                                             <div class="user-comment__avatar">
-                                                <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                             </div>
                                             <div class="comment-right">
                                                 <div class="user-commet__name">
@@ -227,7 +219,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            </li> -->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -296,7 +288,7 @@
                                 <div class="middle-img">
                                     <img src="layout/img/logo/logo_main.png" alt="">
                                 </div>
-    
+
                                 <div class="main-ul">
                                     <ul class="middle-ul-item">
                                         <li class="middle-list">
@@ -348,7 +340,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -378,7 +370,7 @@
                                                 </div>
                                             </div>
                                     </li>
-        
+
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -392,7 +384,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -422,7 +414,7 @@
                                                 </div>
                                             </div>
                                     </li>
-        
+
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -436,7 +428,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -486,7 +478,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -530,7 +522,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -560,7 +552,7 @@
                                                 </div>
                                             </div>
                                     </li>
-        
+
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -574,7 +566,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -624,7 +616,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -654,7 +646,7 @@
                                                 </div>
                                             </div>
                                     </li>
-        
+
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -668,7 +660,7 @@
                                             </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -703,7 +695,7 @@
                                             <div class="product-top">
                                                 <a href="">
                                                     <div class="product-img">
-                                                        <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                        <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                                     </div>
                                                     <div class="product-name__adress">
                                                         <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -712,7 +704,7 @@
                                                 </a>
                                                 <div class="user-comment">
                                                     <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="layout/img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
+                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
                                                     </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
@@ -756,7 +748,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -770,7 +762,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -784,7 +776,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>

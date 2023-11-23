@@ -35,7 +35,7 @@ header img {
 h2 {
     margin: 20px 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 30px;
     font-weight: 600;
 }
 
@@ -128,4 +128,15 @@ input[type="submit"] {
 
 .regsiter-img img {
     width: 100%;
+}
+input{
+    outline: none;
+}
+.regsiter-sub input{
+    background-color: rgb(255, 255, 255);
+}
+.regsiter-sub input:hover{
+    background-color: rgb(154, 148, 148);
+    transition: 0.8s;
+    color: white;
 }

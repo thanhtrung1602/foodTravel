@@ -1,3 +1,17 @@
+<!-- <style>
+    .quality {
+        display: flex;
+        border: none;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    } -->
+
+    <!-- .plus {
+        margin: 0;
+    }
+</style> -->
+
 <?php
     if (isset($_SESSION['cart'])){
         // echo var_dump($_SESSION['cart']);
@@ -28,10 +42,10 @@
                                 <tr>
                                     <td><h2>'.$sp[1].'</h2></td>
                                     <td><img src="layout/img/sanpham/'.$sp[2].'" alt=""></td>
-                                    <td>
-                                        <span>'.$sp[5].'</span>
+                                    <td class="quality">
+                                        <span class="numQuality">'.$sp[5].'</span>
                                     </td>
-                                    <td><span>'.number_format($thanhtien).'</span></td>
+                                    <td><span class="total">'.number_format($thanhtien).'</span></td>
                                     <td><button><a href="'.$linkDel.'">xoa</a></button></td>
                                 </tr>
                             </tbody>
@@ -107,6 +121,28 @@
     </section>
 </main>
 <script src="layout/shoppingCart/shoppingCart.js"></script>
+<!-- <script>
+    const  $ = document.querySelector.bind(document);
+    let sl = $('.num-item');
+    let plus = $('.plus');
+    let minus = $('.minus');
+    sl = 1;
+    plus.onclick = function () {
+        Number()
+        sl ++;
+        let total = $('.total');
+
+        
+        $('.numQuality').innerHTML = sl;
+        console.log(sl)
+        console.log(this)
+    }
+
+    minus.onclick = function () {
+        sl --;
+        $('.numQuality').innerHTML = sl;
+    }
+</script> -->
 <?php
     }
 ?>

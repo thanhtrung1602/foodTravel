@@ -2,7 +2,10 @@
 <div class="main--content">
         <div class="header--wrapper">
             <div class="header--title">
-                <h1>Món ăn</h1>
+                <h1>Sửa</h1>
+                <?php
+                    // var_dump($kqgetone);
+                ?>
             </div>
             <div class="user--info">
                 <div class="box-search">
@@ -16,21 +19,21 @@
                 <table class="form--nhap">
                     <thead>
                         <tr>
-                            <form action="index.php?pg=adddish" method="post">
+                            <form action="index.php?pg=updatedish" method="post">
                                 <th><h4>Mã: </h4>
-                                <input type="text" name="id_dish"></th>                              
+                                <input type="hidden" name="id_dish" value="<?=$kqgetone [0]['id']?>"></th>                              
                                 <th> <h4>Tên: </h4>
-                                <input type="text" name="name_dish"> </th>
+                                <input type="text" name="name_dish" value="<?=$kqgetone [0]['name']?>"> </th>
                                 <th><h4>Giá: </h4>
-                                <input type="text" name="price_dish"></th>
+                                <input type="text" name="price_dish" value="<?=$kqgetone [0]['price']?>"></th>
                                 <th><h4>Hình: </h4>
-                                <input type="file" name="img_dish"> <br></th>
+                                <input type="file" name="img_dish" value="<?=$kqgetone [0]['img']?>"> <br></th>
                                 <th><h4>Mã quán: </h4>
-                                <input type="text" name="id_eatery"></th>
+                                <input type="text" name="id_eatery" value="<?=$kqgetone [0]['id_eatery']?>"></th>
                                 <th><h4>Mã loại: </h4>
-                                <input type="text" name="id_catalog"></th>
+                                <input type="text" name="id_catalog" value="<?=$kqgetone [0]['id_catalog']?>"></th>
                                 <th><h4>Thêm: </h4>
-                                <input type="submit" name="adddish" value="Thêm"></th></th>     
+                                <input type="submit" name="capnhat" value="Cập nhật"></th></th>     
                             </form>
                         </tr>
                     </thead>

@@ -3,6 +3,7 @@
     ob_start();
     include_once "../model/connect.php";
     include_once "../model/monan.php";
+    include_once "../model/comment.php";
     include_once "view/header.php";
     // connectdb();
     if (isset($_GET['pg'])) {
@@ -16,7 +17,6 @@
                     $id=$_GET['id'];
                     deldish($id);
                 }
-
                 $kq=getall_dish();
                 include_once "view/dish.php";
                 break;
@@ -29,9 +29,38 @@
                     $id_eatery=$_POST['id_eatery'];
                     $id_catalog=$_POST['id_catalog'];
                     adddish($id_dish,$name_dish,$price_dish,$img_dish,$id_eatery,$id_catalog);
-                }
-                $kq=getall_dish();
+                }           
                 include_once "view/dish.php";
+                break;
+            case 'updatedish':
+                if (isset($_GET['id'])) {
+                    $id=$_GET['id'];
+                    $kqgetone=getone_dish($id);
+                    $kq=getall_dish();
+                    include_once "view/updatedish.php";
+                }
+                if (isset($_POST['id_dish'])) {
+                    $id_dish=$_POST['id_dish'];
+                    $name_dish=$_POST['name_dish'];
+                    $price_dish=$_POST['price_dish'];
+                    $img_dish=$_POST['img_dish'];
+                    $id_eatery=$_POST['id_eatery'];
+                    $id_catalog=$_POST['id_catalog'];
+                    updatedish($id_dish,$name_dish,$price_dish,$img_dish,$id_eatery,$id_catalog);
+                    $kq=getall_dish();
+                    include_once "view/dish.php";
+                }
+            case 'comment':
+                $kq=getall_bl();
+                include_once "view/comment.php";
+                break;
+            case 'delbl':
+                if (isset($_GET['id'])) {
+                    $id=$_GET['id'];
+                    delbl($id);
+                }
+                $kq=getall_bl();
+                include_once "view/comment.php";
                 break;
             default:    
                 # code...
