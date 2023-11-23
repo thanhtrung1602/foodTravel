@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="fogot-regsiter">
-                            <span><a href="../layout/sigin/register.html">Tạo tài khoản</a></span>
+                            <span><a href="./register.php">Tạo tài khoản</a></span>
                             <span><a href="">Quên mật khẩu?</a></span>
                         </div>
 

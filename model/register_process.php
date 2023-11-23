@@ -22,7 +22,7 @@ if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['sdt'] != '' &
         header("location:../view/register.php");
         die();
     }
-    $conn=connectdb();     
+    $conn=db();     
     $stmt = $conn->prepare('INSERT INTO user (name, sdt, password) values (?, ?, ?)');
     $stmt->bindParam(1, $username);
     $stmt->bindParam(2, $sdt);

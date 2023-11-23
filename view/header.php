@@ -20,7 +20,7 @@
         <!-- Sang -->
         <header>
             <div class="header">
-                <a href="index.php?pg=home"><img class="logo" src="img/logo/logo_main.png" alt=""></a>
+                <a href="index.php?page=home"><img class="logo" src="layout/img/logo/logo_main.png" alt=""></a>
                 <div class="select-container">
                     <select name="" id="" class="select-box">
                         <option value="">Khu Vực</option>
@@ -48,10 +48,12 @@
                 </div>
                 <div class="dangky">
                     <div class="text-dangky">
-                        <a href="/view/sign.php"><span>Đăng nhập</span></a></div>
+                        <a href="view/sign.php"><span>Đăng nhập</span></a>
+                    </div>
                 </div>
                 <div class="icon-sign-in">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
                     <i class="fa-solid fa-bell" ></i>
                 </div>
                 <div class="hr">
