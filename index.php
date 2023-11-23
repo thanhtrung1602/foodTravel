@@ -3,6 +3,7 @@
     ob_start();
     include_once './model/connect.php';
     include_once './model/monan.php';
+    include_once './model/comment.php';
     include_once "view/header.php";
     $dssp = getall_dish();
     // echo var_dump($dssp);
@@ -17,8 +18,18 @@
                     $id = $_GET['id'];
                     $detail = getId($id);
                 };
+                $list=getall_bl();
                 include_once 'view/detail.php';
                 break;
+            case 'addbl':
+                if (isset($_POST['addbl'])&&($_POST['addbl'])) {
+                    $name=$_POST['name'];
+                    $information=$_POST['information'];
+                    addbl($name,$information);
+                }
+                $list=getall_bl();
+                include_once "view/detail.php";
+                break;           
             case 'delCart':
                 if (isset($_GET['ind']) && ($_GET['ind']>= 0)) {
                     array_splice($_SESSION['cart'], $_GET['ind'],1);
