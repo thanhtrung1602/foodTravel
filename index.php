@@ -5,6 +5,7 @@
     include_once './model/monan.php';
     include_once './model/comment.php';
     include_once "view/header.php";
+    include_once './model/catalog.php';
     $dssp = getall_dish();
     // echo var_dump($dssp);
     if(isset($_GET['page'])&&($_GET['page'])) {
@@ -74,13 +75,20 @@
             case 'sign':
                 include_once 'view/sign.php';
                 break;
-            default:
-                $dssp = getall_dish();
-                include_once "view/home.php";
-                break;
         }
     }else{
+        $result = queryToGetResult();
+
+
         include_once "view/home.php";
     }
     include_once "view/footer.php";
+    function queryToGetResult() {
+        $conn=db();
+        $stmt = $conn->prepare("SELECT * FROM catalog");
+        $stmt->execute();
+        $kq=$stmt->fetchAll();
+        return $kq;
+
+    }
 ?>

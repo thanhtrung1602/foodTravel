@@ -10,10 +10,24 @@
             <section class="navbar">
                 <article class="navbar-article">
                     <div class="category">
-                        <ul class="category-ul">
+
+                    <ul class="category-ul">
+                        <li class="category-ul__list">
+                                    <a href="">Tất cả</a>
+                                </li>
+
+
+                        <?php foreach ($result as $category) : ?>
+                            
                             <li class="category-ul__list">
-                                <a href="">Tất cả</a>
+                                <a href=""><?php echo $category['tendm']; ?></a>
                             </li>
+                        <?php endforeach; ?>
+                    </ul>
+
+
+                        <!-- <ul class="category-ul">
+                           
                             <li class="category-ul__list">
                                 <a href="">Đồ ăn</a>
                             </li>
@@ -38,7 +52,7 @@
                             <li class="category-ul__list">
                                 <a href="">Phở</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
 
                 <div class="nav-product">

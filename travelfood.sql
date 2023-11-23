@@ -41,6 +41,9 @@ CREATE TABLE `bill` (
 CREATE TABLE `catalog` (
   `id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL
+  `tendm` varchar(50) NOT NULL,
+  `uutien` int(11) NOT NULL,
+  `hienthi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -52,6 +55,16 @@ INSERT INTO `catalog` (`id`, `name`) VALUES
 (2, 'Món Nhật'),
 (3, 'Nước uống'),
 (4, 'Món chay');
+INSERT INTO `catalog` (`id`, `tendm`, `uutien`, `hienthi`) VALUES
+(9, 'Tất cả', 0, 1),
+(10, 'Đồ ăn', 0, 1),
+(11, 'Đồ uống', 0, 1),
+(12, 'Đồ chay', 0, 1),
+(13, 'Tráng miệng', 0, 1),
+(14, 'Bánh kem', 0, 1),
+(15, 'Món lẩu', 0, 1),
+(17, 'Đồ ăn nhanh', 0, 1),
+(18, 'Phở', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -104,7 +117,10 @@ INSERT INTO `dish` (`id`, `name`, `img`, `price`, `id_eatery`, `id_catalog`) VAL
 (2, 'Cơm trộn Hàn Quốc', 'com-tron.jpeg', 30.000, 5, 1),
 (3, 'Phở Hà Nội xưa', 'pho-hanoi.jpg', 30.000, 5, 1),
 (4, 'xôi', 'xoi-chien.jpg', 25.000, 5, 1);
-
+  `price` double NOT NULL,
+  `id_eatery` int(10) NOT NULL,
+  `id_catalog` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 -- --------------------------------------------------------
 
 --
@@ -224,7 +240,7 @@ ALTER TABLE `bill`
 -- AUTO_INCREMENT cho bảng `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `comment`
