@@ -3,6 +3,7 @@
     ob_start();
     include_once "../model/connect.php";
     include_once "../model/monan.php";
+    include_once "../model/comment.php";
     include_once "view/header.php";
     // connectdb();
     if (isset($_GET['pg'])) {
@@ -49,6 +50,17 @@
                     $kq=getall_dish();
                     include_once "view/dish.php";
                 }
+            case 'comment':
+                $kq=getall_bl();
+                include_once "view/comment.php";
+                break;
+            case 'delbl':
+                if (isset($_GET['id'])) {
+                    $id=$_GET['id'];
+                    delbl($id);
+                }
+                $kq=getall_bl();
+                include_once "view/comment.php";
                 break;
             default:    
                 # code...

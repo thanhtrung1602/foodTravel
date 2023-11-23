@@ -66,7 +66,7 @@
                             </li>
                             <li class="food-item">
                                 <a href="">
-                                                                        <div class="food-travel">
+                                        <div class="food-travel">
                                         <div class="food-img">
                                             <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
@@ -81,7 +81,7 @@
                             </li>
                             <li class="food-item">
                                 <a href="">
-                                                                        <div class="food-travel">
+                                        <div class="food-travel">
                                         <div class="food-img">
                                             <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
@@ -96,7 +96,7 @@
                             </li>
                             <li class="food-item">
                                 <a href="">
-                                                                        <div class="food-travel">
+                                        <div class="food-travel">
                                         <div class="food-img">
                                             <img src="layout/img/sanpham/com-chien.jpeg" alt="">
                                         </div>
@@ -116,64 +116,48 @@
                         <h2>Đánh giá</h2>
                         <div class="comment-detail">
                             <div class="writer-comment">
-    
                                 <div class="inp-avatar">
-                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
+                                    <!-- <img src="layout/img/avatar-user/tom jack.jpg" alt=""> -->
                                 </div>
                                 <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
+                                <form action="index.php?page=addbl" method="post">
+                                    <div>
+                                        <h4>Tên khách Hàng: </h4>
+                                        <input type="text" name="name">
+                                        <h4>Nội dung: </h4>
+                                        <input type="text" name="information">
+                                        <input type="submit" name="addbl" value="Đăng">
                                     </div>
-    
-                                    <div class="inp-comment">
-                                        <input type="text" name="writer" id="" placeholder="Đánh giá món ăn...">
-                                    </div>
+                                </form>
+                                    
                                 </div>
                             </div>
-    
-                            <div class="done-comment">
-                                <div class="inp-avatar">
-                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
-                                </div>
-                                <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
-                                    </div>
-    
-                                    <div class="inp-comment">
-                                        <p>Nhìn đã thấy ngon rồi mới ăn 1 lần đã muốn ăn lần thứ 2</p>
-                                    </div>
-
-                                    <div class="time-comment">
-                                        <span>1 ngày trước</span>
-                                        <span><i class="fa-solid fa-thumbs-up"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="done-comment">
-                                <div class="inp-avatar">
-                                    <img src="layout/img/avatar-user/tom jack.jpg" alt="">
-                                </div>
-                                <div class="inp-name">
-                                    <div class="name-comment">
-                                        <span>Tom Hói</span>
-                                    </div>
-    
-                                    <div class="inp-comment">
-                                        <p>Nhìn đã thấy ngon rồi mới ăn 1 lần đã muốn ăn lần thứ 2</p>
-                                    </div>
-
-                                    <div class="time-comment">
-                                        <span>1 ngày trước</span>
-                                        <span><i class="fa-solid fa-thumbs-up"></i></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                foreach ($list as $item) {
+                                    extract($item);
+                                    echo '<div class="done-comment">
+                                            <div class="inp-avatar">
+                                                <!-- <img src="layout/img/avatar-user/tom jack.jpg" alt=""> -->
+                                            </div>
+                                            <div class="inp-name">
+                                                <div class="name-comment">
+                                                    <span><strong>'.$name.'</strong></span>
+                                                </div>
+                
+                                                <div class="inp-comment">
+                                                    <p>'.$information.'</p>
+                                                </div>
+            
+                                                <div class="time-comment">
+                                                    <span>1 ngày trước</span>
+                                                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>';
+                                }
+                            ?>                  
                         </div>
                     </div>
-
-
                 </article>
             </section>
         </main>
