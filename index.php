@@ -68,6 +68,7 @@
 
                     addBill($nameUser, $phone, $addressUser, $note, $id_dish);
                 }
+                include_once 'view/home.php';
                 $dssp = getall_dish(1);
                 break;
             case 'sign':
