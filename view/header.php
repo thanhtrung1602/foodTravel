@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./detail.css">
+    <link rel="stylesheet" href="./layout/assets/reset.css">
+    <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
+    <link rel="stylesheet" href="./layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <!-- Sang -->
         <header>
             <div class="header">
-                <img class="logo" src="/img/logo/logo_main.png" alt="">
+                <a href="index.php?page=home"><img class="logo" src="layout/img/logo/logo_main.png" alt=""></a>
                 <div class="select-container">
                     <select name="" id="" class="select-box">
                         <option value="">Khu Vực</option>
@@ -44,48 +48,20 @@
                 </div>
                 <div class="dangky">
                     <div class="text-dangky">
-                        <a href=""><span>Đăng nhập</span></a></div>
+                        <a href="view/sign.php"><span>Đăng nhập</span></a>
+                    </div>
                 </div>
                 <div class="icon-sign-in">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
                     <i class="fa-solid fa-bell" ></i>
                 </div>
                 <div class="hr">
                     
                 </div>
                 <div class="quoc-ki">
-                    <img src="/img/logo/quoc-kyVN.png" alt="">
-                    <img src="/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
+                    <img src="layout/img/logo/quoc-kyVN.png" alt="">
+                    <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
                 </div> 
             </div> 
         </header>
-        <!-- Trung, Huy -->
-        <div class="banner">
-            <section class="banner-section">
-                <article></article>
-            </section>
-        </div>
-        <nav>
-            <section class="navbar">
-                <article>
-    
-                </article>
-            </section>
-        </nav>
-        <main>
-            <section class="main">
-                <article>
-    
-                </article>
-            </section>
-        </main>
-        <!-- Tuan -->
-        <footer>
-            <section class="footer">
-                <article></article>
-            </section>
-        </footer>
-    </div>
-    <script src="./assets/main.js"></script>
-</body>
-</html>

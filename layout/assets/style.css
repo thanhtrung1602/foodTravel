@@ -165,6 +165,10 @@ header{
 
 .product-ul{
     margin: 0 10px;
+    flex-wrap: wrap;
+}
+.product-ul li{
+    flex-basis: 24%;
 }
 
 .product-ul__item{
