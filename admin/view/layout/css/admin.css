@@ -107,7 +107,7 @@ body{
 }
 .box-search{
     border-radius: 30px;
-    background: #ebe9e9;
+    /* background: #ebe9e9; */
     padding: 10px;
     align-items: center;
     /* border: none; */
@@ -150,6 +150,7 @@ table{
 thead{
     background-color: rgba(68, 68, 68, 0.986);
     color: white;
+    text-align: center;
 }
 th{
     padding: 8px;
@@ -183,4 +184,10 @@ form{
 }
 .form--nhap thead tr th input{
     width: 70px;
+}
+.form--nhap thead tr th button{
+    width: 70px;
+}
+tbody tr td ion-icon{
+    width: 60px;
 }

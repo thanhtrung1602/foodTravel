@@ -20,7 +20,6 @@
     }else{
         include_once "view/home.php";
     }
-
     include_once "view/footer.php";
 
     

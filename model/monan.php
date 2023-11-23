@@ -10,6 +10,13 @@
         return $dssp;
 
     }
+    function getone_dish($id){
+        $conn= db();
+        $stmt = $conn->prepare("SELECT * FROM dish where id=".$id);
+        $stmt->execute();
+        $kq=$stmt->fetchAll();
+        return $kq;
+    }
     function deldish($id){
         $conn= db();
         $sql = "DELETE FROM dish WHERE id=".$id;
@@ -21,6 +28,12 @@
         $sql = "INSERT INTO dish (id,name,price,img,id_eatery,id_catalog) VALUES ('".$id_dish."','".$name_dish."','".$price_dish."','".$img_dish."','".$id_eatery."','".$id_catalog."')";
         // use exec() because no results are returned
         $conn->exec($sql);
+    }
+    function updatedish($id_dish,$name_dish,$price_dish,$img_dish,$id_eatery,$id_catalog){
+        $conn= db();
+        $sql = "UPDATE dish SET name='".$name_dish."' ,price='".$price_dish."' ,img='".$img_dish."' ,id_eatery='".$id_eatery."' ,id_catalog='".$id_catalog."' WHERE id=".$id_dish;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
     }
     function checkuser($username,$password) {
         $conn=db();
@@ -39,5 +52,4 @@
         $kq = $stmt->fetchAll();
         return $kq;
     }
-
 ?>
