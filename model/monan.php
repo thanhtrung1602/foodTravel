@@ -71,4 +71,18 @@
         $kq = $stmt->fetchAll();
         return $kq;
     }
+    // function get_address() {
+    //     $conn=db();
+    //     $sql_dia_chi = "SELECT mon_an.id, dia_chi.ten_dia_chi
+    //     FROM mon_an
+    //     JOIN dia_chi ON mon_an.dia_chi_id = dia_chi.id";
+    //     $result_dia_chi = $conn->query($sql_dia_chi);
+
+    //                     $dia_chi_array = array();
+    //             while ($row_dia_chi = $result_dia_chi->fetch_assoc()) {
+    //                 $dia_chi_array[$row_dia_chi['id']] = $row_dia_chi['ten_dia_chi'];
+    //             }
+    // }
+
+
 ?>

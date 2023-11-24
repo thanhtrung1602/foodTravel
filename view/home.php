@@ -46,6 +46,10 @@
                     <ul class="product-ul flex-box">
                                 <?php
                                     // var_dump($dish);
+                                    // $dia_chi_array = array();
+                                    // while ($row_dia_chi = $result_dia_chi->fetch_assoc()) {
+                                    //     $dia_chi_array[$row_dia_chi['id']] = $row_dia_chi['ten_dia_chi'];
+                                    // }
                                     $kq="";
                                     foreach ($dssp as $item) {
                                         extract($item);
@@ -58,7 +62,7 @@
                                                         </div>
                                                         <div class="product-name__adress">
                                                             <span>'.$name.'</span>
-                                                            <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                            <p>'.$dia_chi_array[$id].'</p>
                                                         </div>
                                                     </a>
                                                         <div class="user-comment">

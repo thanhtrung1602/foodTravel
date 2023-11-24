@@ -15,9 +15,9 @@
         // use exec() because no results are returned
         $conn->exec($sql);
     }
-    function addbl($name,$information){
+    function addbl($id_dish,$nameuser,$information){
         $conn= db();
-        $sql = "INSERT INTO comment (name,information) VALUES ('".$name."','".$information."')";
+        $sql = "INSERT INTO comment (id_dish,nameuser,information) VALUES ('".$id_dish."','".$nameuser."','".$information."')";
         // use exec() because no results are returned
         $conn->exec($sql);
     }

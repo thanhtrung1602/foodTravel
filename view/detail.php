@@ -1,7 +1,9 @@
 <?php
     if (isset($detail)) {
         extract($detail);
+        // var_dump($detail);
     }
+    // var_dump($detail);
 ?>
         <!-- Trung, Huy -->
         <nav>
@@ -120,10 +122,11 @@
                                     <!-- <img src="layout/img/avatar-user/tom jack.jpg" alt=""> -->
                                 </div>
                                 <div class="inp-name">
-                                <form action="index.php?page=addbl" method="post">
+                                <form action="index.php?page=detail&id=<?=$id?>" method="post">
                                     <div>
+                                        <input type="hidden" name="id_dish" value="<?= $id?>">
                                         <h4>Tên khách Hàng: </h4>
-                                        <input type="text" name="name">
+                                        <input type="text" name="nameuser">
                                         <h4>Nội dung: </h4>
                                         <input type="text" name="information">
                                         <input type="submit" name="addbl" value="Đăng">
@@ -141,7 +144,7 @@
                                             </div>
                                             <div class="inp-name">
                                                 <div class="name-comment">
-                                                    <span><strong>'.$name.'</strong></span>
+                                                    <span><strong>'.$nameuser.'</strong></span>
                                                 </div>
                 
                                                 <div class="inp-comment">

@@ -30,7 +30,7 @@
                                     extract($item);
                                     echo '<tr>
                                             <td>'.$id.'</td>
-                                            <td>'.$name.'</td>
+                                            <td>'.$nameuser.'</td>
                                             <td>'.$information.'</td>
                                             <td><a href="index.php?pg=delbl&id='.$id.'">Xóa</a></td>
                                         </tr>';
