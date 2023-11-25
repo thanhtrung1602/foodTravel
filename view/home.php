@@ -62,7 +62,7 @@
                                                         </div>
                                                         <div class="product-name__adress">
                                                             <span>'.$name.'</span>
-                                                            <p>dia chi</p>
+                                                            <p>'.$address.'</p>
                                                         </div>
                                                     </a>
                                                         <div class="user-comment">
