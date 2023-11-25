@@ -77,9 +77,9 @@
                     $phone = $_POST['phone'];
                     $addressUser = $_POST['addressUser'];
                     $note = $_POST['note'];
+                    $totalPay = $_POST['totalPay'];
                     $id_dish = $_POST['id'];
-
-                    addBill($nameUser, $phone, $addressUser, $note, $id_dish);
+                    addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish);
                 }
                 include_once 'view/home.php';
                 $dssp = getall_dish(1);

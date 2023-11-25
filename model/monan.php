@@ -43,9 +43,9 @@
         $conn->exec($sql);
     }
 
-    function addBill($nameUser, $phone, $addressUser, $note, $id_dish){
+    function addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish){
         $conn = db();
-        $sql = "INSERT INTO test (nameUser, phone, addressUser, note, id_dish) values ('$nameUser', '$phone', '$addressUser', '$note', '$id_dish')";
+        $sql = "INSERT INTO bill (nameUser, phone, addressUser, note, totalPay, id_dish) values ('$nameUser', '$phone', '$addressUser', '$note', '$totalPay', '$id_dish')";
         $conn -> exec($sql);
     }
     function updatedish($id_dish,$name_dish,$price_dish,$img_dish,$id_eatery,$id_catalog){

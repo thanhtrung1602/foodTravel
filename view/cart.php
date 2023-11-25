@@ -112,6 +112,7 @@
     
                             </div>
                         </div>
+                        <input type="hidden" name="totalPay" value="<?=$tong?>">
                         <input type="hidden" name="id" value="<?=$sp[0]?>">
                         <input type="submit" value="Đặt hàng" name="sub" class="order">
                     </div>
