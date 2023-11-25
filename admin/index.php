@@ -4,7 +4,10 @@
     include_once "../model/connect.php";
     include_once "../model/monan.php";
     include_once "../model/comment.php";
+    include_once "../model/catalog.php";
     include_once "view/header.php";
+   
+
     // connectdb();
     if (isset($_GET['pg'])) {
         switch ($_GET['pg']) {
@@ -62,12 +65,66 @@
                 $kq=getall_bl();
                 include_once "view/comment.php";
                 break;
+
+                case 'catalog':
+                    $kq=getall_dm();
+    
+                    include_once "view/catalog.php";
+                    break;
+
+                case 'adddm':
+                    
+                    if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
+                        $tendm=$_POST['tendm'];
+                        themdm($tendm);
+                    }
+                    $kq=getall_dm();
+    
+                     include_once "view/catalog.php";
+                    break;
+    
+                    
+            case 'deletedm':
+                if (isset($_GET['id'])) {
+                     $id=$_GET['id'];
+                     deletedm($id);
+                }
+                $kq=getall_dm();
+    
+                include_once "view/catalog.php";
+                break;   
+
+                case 'updatedmform':
+                    //lấy 1 record đúng vs id truyền vào
+                    if (isset($_GET['id'])) {
+                        $id=$_GET['id'];
+                        $kqone=getonedm($id);
+                         //cần 1 ds 
+                    $kq=getall_dm();
+                    include_once "view/updatedmform.php";
+                   }
+                 if(isset($_POST['id'])){
+                    $id=$_POST['id'];
+                    $tendm=$_POST['tendm'];
+                    updatedm($id,$tendm);
+                    $kq=getall_dm();
+                    include_once "view/catalog.php";
+                 }
+
+                    break;   
+              
+
             default:    
-                # code...
+      
+               
                 break;
         }
     }else {
         include_once "view/home.php";
+        
+        
     }
+ 
 
+    
 ?>
