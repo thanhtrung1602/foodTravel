@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="view/layout/css/admin.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
 </head>
 <body>
     <div class="sidebar">
@@ -21,37 +22,37 @@
                 </a>
             </li>
             <li>
-                <a href="index.php?pg=dish">
+                <a href="index.php?page=dish">
                     <ion-icon name="fast-food-outline"></ion-icon>
                     <span>Món ăn</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?pg=catalog">
+                <a href="index.php?page=catalog">
                     <ion-icon name="library-outline"></ion-icon>
                     <span>Loại</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?pg=user">
+                <a href="index.php?page=user">
                     <ion-icon name="person-circle-outline"></ion-icon>
                     <span>Khách hàng</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?pg=comment">
+                <a href="index.php?page=comment">
                     <ion-icon name="chatbox-outline"></ion-icon>
                     <span>Bình luận</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?pg=Thống kê">
+                <a href="index.php?page=Thống kê">
                     <ion-icon name="cellular-outline"></ion-icon>
                     <span>Thống kê</span>
                 </a>
             </li>
             <li class="logout">
-                <a href="index.php?pg=out" >
+                <a href="index.php?page=out" >
                     <ion-icon name="exit-outline"></ion-icon>
                     <span>Thoát</span>
                 </a>
