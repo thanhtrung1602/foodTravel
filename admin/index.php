@@ -9,8 +9,8 @@
    
 
     // connectdb();
-    if (isset($_GET['pg'])) {
-        switch ($_GET['pg']) {
+    if (isset($_GET['page'])) {
+        switch ($_GET['page']) {
             case 'dish':
                 $kq=getall_dish();
                 include_once "view/dish.php";

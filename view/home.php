@@ -589,7 +589,7 @@
                                             <div class="product-top">
                                                 <a href="">
                                                     <div class="product-img">
-                                                        <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                        <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                                     </div>
                                                     <div class="product-name__adress">
                                                         <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -642,7 +642,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -656,7 +656,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -670,7 +670,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
