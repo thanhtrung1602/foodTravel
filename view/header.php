@@ -46,7 +46,7 @@
                 </div>
                 <div class="dangky">
                     <div class="text-dangky">
-                        <a href=""><span>Đăng nhập</span></a></div>
+                        <a href="/view/sign.php"><span>Đăng nhập</span></a></div>
                 </div>
                 <div class="icon-sign-in">
                     <i class="fa-solid fa-cart-shopping"></i>
