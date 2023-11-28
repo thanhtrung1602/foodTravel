@@ -46,7 +46,7 @@
                                         <span class="numQuality">'.$sp[5].'</span>
                                     </td>
                                     <td><span class="total">'.number_format($thanhtien).'</span></td>
-                                    <td><button><a href="'.$linkDel.'">xoa</a></button></td>
+                                    <td><a href="'.$linkDel.'"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                             </tbody>
                             ';

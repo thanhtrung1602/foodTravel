@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="layout/base/fontawesome-free-6.4.2-web/css/all.min.css">
     <title>Document</title>
 </head>
 
