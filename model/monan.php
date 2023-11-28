@@ -71,6 +71,14 @@
         $kq = $stmt->fetchAll();
         return $kq;
     }
+    function getonedm(){
+        $conn=db();
+        $stmt = $conn->prepare("SELECT * FROM category ORDER BY id DESC");
+        $stmt->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $kq=$stmt->fetchAll();
+        return $kq;
+      }
     // function get_address() {
     //     $conn=db();
     //     $sql_dia_chi = "SELECT mon_an.id, dia_chi.ten_dia_chi

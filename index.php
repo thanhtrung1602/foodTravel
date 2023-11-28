@@ -5,14 +5,19 @@
     include_once './model/monan.php';
     include_once './model/comment.php';
     include_once "view/header.php";
+    // include_once './model/catalog.php';
+
     // include_once './'
     $dssp = getall_dish();
+    $kq=getonedm();
+
     // echo var_dump($dssp);
     if(isset($_GET['page'])&&($_GET['page'])) {
         $page = $_GET['page'];
         switch ($page) {
             case 'home':
                 include_once 'view/home.php';
+  
                 break;
             case 'detail':
                 if (isset($_GET['id']) && ($_GET['id']>0)) {
@@ -97,10 +102,23 @@
                 $dssp = getall_dish();
                 include_once "view/home.php";
                 break;
+
         }
 
     }else{
         include_once "view/home.php";
     }
     include_once "view/footer.php";
+
+
+    // function queryToGetResult() {
+    //     $conn=db();
+    //     $stmt = $conn->prepare("SELECT * FROM category");
+    //     $stmt->execute();
+    //     $kq=$stmt->fetchAll();
+    //     return $kq;
+
+    // }
+
+    
 ?>

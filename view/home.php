@@ -10,10 +10,27 @@
             <section class="navbar">
                 <article class="navbar-article">
                     <div class="category">
-                        <ul class="category-ul">
-                            <li class="category-ul__list">
+
+                    <ul class="category-ul">
+                    <li class="category-ul__list">
                                 <a href="">Tất cả</a>
                             </li>
+
+
+        <?php 
+            foreach ($kq as $item){
+            extract($item);
+                echo '<li class="category-ul__list">
+                <a href="">'.$tendm.'</a>
+            </li>';
+            }
+            
+        ?>
+    </ul>
+
+
+                        <!-- <ul class="category-ul">
+                           
                             <li class="category-ul__list">
                                 <a href="">Đồ ăn</a>
                             </li>
@@ -38,7 +55,7 @@
                             <li class="category-ul__list">
                                 <a href="">Phở</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
 
                 <div class="nav-product">
@@ -572,7 +589,7 @@
                                             <div class="product-top">
                                                 <a href="">
                                                     <div class="product-img">
-                                                        <img src="./img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                        <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
                                                     </div>
                                                     <div class="product-name__adress">
                                                         <span>Bún đậu cô 3, ít bún nhiều đậu</span>
@@ -625,7 +642,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -639,7 +656,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>
@@ -653,7 +670,7 @@
                             <div class="news">
                                 <a href="">
                                     <div class="new-img">
-                                        <img src="./img/sanpham/banh-dong-xu.jpg" alt="">
+                                        <img src="layout/img/sanpham/banh-dong-xu.jpg" alt="">
                                     </div>
                                     <div class="new-title">
                                         <h3>Bánh đồng xu phô mai đang hot ”Rần rần” hiện nay</h3>

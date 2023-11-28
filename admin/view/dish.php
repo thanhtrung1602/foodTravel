@@ -16,7 +16,7 @@
                 <table class="form--nhap">
                     <thead>
                         <tr>
-                            <form action="index.php?pg=adddish" method="post">
+                            <form action="index.php?page=adddish" method="post">
                                 <th><h4>Mã: </h4>
                                 <input type="text" name="id_dish"></th>                              
                                 <th> <h4>Tên: </h4>
@@ -59,7 +59,7 @@
                                             <td><img class="img--dish" src="../img/sanpham/'.$img.'" alt=""></td>
                                             <td>'.$id_eatery.'</td>
                                             <td>'.$id_catalog.'</td>
-                                            <td><a href ="index.php?pg=updatedish&id='.$id.'"><ion-icon name="hammer-outline"></ion-icon></a> | <a href="index.php?pg=deldish&id='.$id.'"><ion-icon name="trash-outline"></ion-icon></a></td>
+                                            <td><a href ="index.php?page=updatedish&id='.$id.'"><ion-icon name="hammer-outline"></ion-icon></a> | <a href="index.php?page=deldish&id='.$id.'"><ion-icon name="trash-outline"></ion-icon></a></td>
                                         </tr>';
                                 }
                             }    
