@@ -2,8 +2,9 @@
 session_start();
 ob_start();
 require "../model/connect.php";
-if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['sdt'] != '' && $_POST['password'] != '') {
+if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != '' && $_POST['password'] != '' && $_POST['sdt'] != '') {
     $username = $_POST['username'];
+    $email = $_POST['email'];
     $sdt = $_POST['sdt'];
     // $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $password = $_POST['password'];
@@ -23,10 +24,11 @@ if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['sdt'] != '' &
         die();
     }
     $conn=db();     
-    $stmt = $conn->prepare('INSERT INTO user (name, sdt, password) values (?, ?, ?)');
+    $stmt = $conn->prepare('INSERT INTO user (name, sdt, email, password) values (?, ?, ?, ?)');
     $stmt->bindParam(1, $username);
     $stmt->bindParam(2, $sdt);
-    $stmt->bindParam(3, $password);
+    $stmt->bindParam(3, $email);
+    $stmt->bindParam(4, $password);
     $stmt->execute();
     // $password  = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $_SESSION["thongbao"] = "Bạn vừa đăng ký tài khoản thành công!";

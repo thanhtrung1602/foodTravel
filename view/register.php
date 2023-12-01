@@ -35,11 +35,12 @@
                         <div class="form-user">
                             <input type="text" name="username" id="" placeholder="Họ và tên" >
                         </div>
-
                         <div class="form-phone">
                             <input type="text" name="sdt" id="" placeholder="Số điện thoại">
                         </div>
-
+                        <div class="form-phone">
+                            <input type="email" name="email" id="" placeholder="Email">
+                        </div>
                         <div class="form-pass">
                             <input type="password" name="password" id="" placeholder="Mật khẩu">
                             <i class="fa-solid fa-eye-slash"></i>
