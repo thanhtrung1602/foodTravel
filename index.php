@@ -6,12 +6,11 @@
     include_once './model/comment.php';
     include_once "view/header.php";
     // include_once './model/catalog.php';
-
+    
     // include_once './'
     $dssp = getall_dish();
     $kq=getonedm();
-
-    // echo var_dump($dssp);
+    $bill = bill();
     if(isset($_GET['page'])&&($_GET['page'])) {
         $page = $_GET['page'];
         switch ($page) {
@@ -83,10 +82,12 @@
                     $addressUser = $_POST['addressUser'];
                     $note = $_POST['note'];
                     $totalPay = $_POST['totalPay'];
-                    $id_dish = $_POST['id'];
+                    $id_dish = $_POST['id_dish'];
+                    $status = $_POST['status'];
                     addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish);
+                    header('location:index.php?page=bill');
                 }
-                include_once 'view/home.php';
+                // include_once 'view/bill.php';
                 $dssp = getall_dish(1);
                 break;
             case 'sign':
@@ -98,6 +99,10 @@
             //         $dia_chi_array[$row_dia_chi['id']] = $row_dia_chi['ten_dia_chi'];
             //     }
             //     break;
+            case 'bill':
+                $bill = bill();
+                include_once 'view/bill.php';
+                break;
             default:
                 $dssp = getall_dish();
                 include_once "view/home.php";
