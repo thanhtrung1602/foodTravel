@@ -1,8 +1,28 @@
 <?php
-session_start();
-ob_start();
+// session_start();
+// ob_start();
+// require "../model/connect.php";
+// if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != '' &&  $_POST['sdt'] != '') {
+//     $username = $_POST['username'];
+//     $email = $_POST['email'];
+//     $sdt = $_POST['sdt'];
+//     $conn = db();
+//     $stmt = $conn->prepare('UPDATE user SET name = ?, sdt =?, email =?');
+//     $stmt->bindParam(1, $username);
+//     $stmt->bindParam(2, $sdt);
+//     $stmt->bindParam(3, $email);
+//     $stmt->execute();
+//     // $password  = password_hash($_POST['password'],PASSWORD_DEFAULT);
+//     $_SESSION["thongbao"] = "Bạn vừa cập nhật tài khoản thành công!";
+//     include_once 'sign.php';
+// } else {
+//     $_SESSION["thongbao"] = "Vui lòng nhập đầy đủ thông tin!";
+//     // header("location: ./update_user.php");
+//     include_once 'update_user.php';
+// }
+// $conn = null;
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +45,7 @@ ob_start();
         <main>
             <section class="form">
                 <article class="form-item">
-                    <form action="../model/update_user_process.php" method="post">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <h2>Cập nhật tài khoản</h2>
                         <?php
                         if (isset($_SESSION["thongbao"])) {
@@ -42,6 +62,11 @@ ob_start();
                         <div class="form-phone">
                             <input type="email" name="email" id="" placeholder="Email">
                         </div>
+
+                        <div class="fogot-regsiter">
+                            <span><a href="./register.php">Tạo tài khoản</a></span> -->
+                            <!-- <span><a href="../model/reset_password.php">Đổi mật khẩu</a></span>
+                        </div>
                         <div class="regsiter-sub">
                             <input type="submit" value="Cập nhật" name="submit" id="">
                         </div>
@@ -56,4 +81,4 @@ ob_start();
     </div>
 </body>
 
-</html>
+</html> --> 

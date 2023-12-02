@@ -8,7 +8,6 @@
         $dssp = $stmt->fetchAll();
         $conn = null;
         return $dssp;
-
     }
     function getone_dish($id){
         $conn= db();
@@ -43,11 +42,14 @@
         $conn->exec($sql);
     }
 
-    function addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish){
+    function addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish) {
         $conn = db();
-        $sql = "INSERT INTO bill (nameUser, phone, addressUser, note, totalPay, id_dish) values ('$nameUser', '$phone', '$addressUser', '$note', '$totalPay', '$id_dish')";
-        $conn -> exec($sql);
+        $sql = "INSERT INTO bill (nameUser, phone, addressUser, note, totalPay, id_dish) VALUES (?, ?, ?, ?, ?, ?)";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$nameUser, $phone, $addressUser, $note, $totalPay, $id_dish]);
     }
+    
     function updatedish($id_dish,$name_dish,$price_dish,$img_dish,$id_eatery,$id_catalog){
         $conn= db();
         $sql = "UPDATE dish SET name='".$name_dish."' ,price='".$price_dish."' ,img='".$img_dish."' ,id_eatery='".$id_eatery."' ,id_catalog='".$id_catalog."' WHERE id=".$id_dish;
@@ -79,6 +81,17 @@
         $kq=$stmt->fetchAll();
         return $kq;
       }
+
+    function bill() {
+        $conn = db();
+        $sql = "SELECT * FROM bill ORDER BY id DESC";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $bill = $stmt->fetchAll();
+        $conn = null;
+        return $bill;
+    }
     // function get_address() {
     //     $conn=db();
     //     $sql_dia_chi = "SELECT mon_an.id, dia_chi.ten_dia_chi

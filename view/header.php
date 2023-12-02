@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
     <link rel="stylesheet" href="./layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/bill/bill.css">
     <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +50,7 @@
                 <?php
                     if(isset($_SESSION['username']) && ($_SESSION['username']!="")) {
                         // echo '<a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a>';
-                        echo '<div class="dangky"><div class="text-dangky"><a href="../view/update_user.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
                         echo '<div class="dangky"><div class="text-dangky"><a href="index.php?page=thoat"><span>Đăng xuất</span></a></div></div>';
                     } else {
                 ?>
