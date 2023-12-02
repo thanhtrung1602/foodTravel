@@ -233,9 +233,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -277,9 +274,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -321,9 +315,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -371,9 +362,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -415,9 +403,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -459,9 +444,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -509,9 +491,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -553,9 +532,6 @@
                                                 </div>
                                             </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
@@ -597,9 +573,6 @@
                                                     </div>
                                                 </a>
                                                 <div class="user-comment">
-                                                    <div class="user-comment__avatar">
-                                                        <img class="avatar-img" src="./img/avatar-user/tom jack.jpg" alt="ảnh user" loading="lazy">
-                                                    </div>
                                                     <div class="comment-right">
                                                         <div class="user-commet__name">
                                                             <span>Nguyễn Thành Trung</span>
