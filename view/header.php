@@ -70,7 +70,7 @@
                 </div>
                 <div class="quoc-ki">
                     <img src="layout/img/logo/quoc-kyVN.png" alt="">
-                    <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
+                    <!-- <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt=""> -->
                 </div> 
             </div> 
         </header>

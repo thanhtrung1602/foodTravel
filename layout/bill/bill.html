@@ -14,19 +14,53 @@
 <body>
     <main>
         <div class="bill-food">
+            
             <div class="top-header">
                 <span><i class="fa-solid fa-bag-shopping"></i></span>
                 <span>ĐẶT HÀNG THÀNH CÔNG</span>
             </div>
-    
+            
             <div class="top-next">
                 Cảm ơn anh <strong class="bold-text">Trung</strong> đã cho Travelfood được phục vụ
             </div>
             
+            <div class="del-bill">
+                <form class="form-del__bill" action="index.php?page=deleteBill" method="post">
+                    <span class="close-bill"><i class="fa-solid fa-xmark"></i></span>
+                    <h3>Vui lòng chia sẻ lý do anh <span>Trung</span> muốn hủy đơn hàng này: </h3>
+                    <div class="reason-bill">
+                        <div class="false-sdt">
+                            <input type="checkbox" name="" id=""> <label for="">Sai số điện thoại</label>
+                        </div>
+    
+                        <div class="false-info">
+                            <input type="checkbox" name="" id=""> <label for="">Sai thông tin địa chỉ</label>
+                        </div>
+    
+                        <div class="false-other">
+                            <input type="checkbox" name="" id=""> <label for="">Vấn đề khác</label>
+                        </div>
+                    </div>
+    
+                    <input type="submit" value="Xác nhận" class="send-del--bill">
+                </form>
+            </div>
+
+            <div class="successBill">
+                <form action="" class="pos-bill" method="post">
+                    <div class="form-success">
+                        <div class="success-img">
+                            <img src="/layout/img/issuccessImg/popup.png" alt="">
+                        </div>
+                    </div>
+                    <input type="submit" value="Đóng" class="close-done">
+                </form>
+            </div>
+
             <div class="middle-top">
                 <div class="head-middle">
                     <span>Đơn hàng: </span>
-                    <span>Quản lý đơn hàng | <a href="">Hủy</a></span>
+                    <span>Quản lý đơn hàng | <a href="" class="cancel-bill">Hủy</a></span>
                 </div>
     
                 <div class="mid-middle">
@@ -57,8 +91,57 @@
             </div>
     
             <input type="submit" value="XÁC NHẬN" class="sub-bill">
-        </div>
-    </main>
 
+            <div class="show-pro">
+                <h2>Món ăn đã đặt</h2>
+
+                <div class="show-pro--oder">
+                    <div class="img-show__oder">
+                        <img class="show-pro--img" src="/layout/img/sanpham/banh-dong-xu.jpg" alt="">
+                    </div>
+
+                    <div class="show-name__quanlyti--total">
+                        <p class="name-prod">xôi chiên</p>
+                        <span class="qua-sl">số lượng: </span>
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const checkedBoxs = document.querySelectorAll('input[type="checkbox"]');
+        const subCheck = document.querySelector('.send-del--bill');
+        const closeBill =  document.querySelector('.close-bill')
+        const delbill = document.querySelector('.del-bill');
+        const cancelBill = document.querySelector('.cancel-bill');
+        const subBill = document.querySelector('.sub-bill');
+        const successBill = document.querySelector('.successBill')
+        // xử lý mở success 
+        subBill.onclick = function () {
+            successBill.style.display = 'block';
+        }
+        //xử lý bật boxcheck 
+        cancelBill.onclick = function () {
+            delbill.style.display = 'block';
+            event.preventDefault();
+        }
+        // xử lý click boxcheck
+        console.log(checkedBoxs)
+        checkedBoxs.forEach(function (checkedBox) {
+            console.log(this)
+            checkedBox.onclick = function () {
+                const atLeastOneChecked = [...checkedBoxs].some(function (box) {
+                    return box.checked;
+                })
+                subCheck.style.display = atLeastOneChecked ? 'block' : 'none';
+            }
+        })
+        // xử lý đóng box
+        closeBill.onclick = function () {
+            delbill.style.display = 'none'
+        }
+    </script>
 </body>
 </html>
