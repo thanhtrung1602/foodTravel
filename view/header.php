@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
     <link rel="stylesheet" href="./layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/bill/bill.css">
     <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,11 +47,19 @@
                     <input type="text" placeholder="Địa điểm, món ăn,...">
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
+                <?php
+                    if(isset($_SESSION['username']) && ($_SESSION['username']!="")) {
+                        // echo '<a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="index.php?page=thoat"><span>Đăng xuất</span></a></div></div>';
+                    } else {
+                ?>
                 <div class="dangky">
                     <div class="text-dangky">
                         <a href="view/sign.php"><span>Đăng nhập</span></a>
                     </div>
                 </div>
+                <?php }?>
                 <div class="icon-sign-in">
                     <a href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     
@@ -61,7 +70,7 @@
                 </div>
                 <div class="quoc-ki">
                     <img src="layout/img/logo/quoc-kyVN.png" alt="">
-                    <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
+                    <!-- <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt=""> -->
                 </div> 
             </div> 
         </header>

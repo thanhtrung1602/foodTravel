@@ -8,7 +8,6 @@
         $dssp = $stmt->fetchAll();
         $conn = null;
         return $dssp;
-
     }
     function getdishShow(){
         $conn= db();
@@ -94,11 +93,14 @@
         $conn->exec($sql);
     }
 
-    function addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish){
+    function addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish) {
         $conn = db();
-        $sql = "INSERT INTO bill (nameUser, phone, addressUser, note, totalPay, id_dish) values ('$nameUser', '$phone', '$addressUser', '$note', '$totalPay', '$id_dish')";
-        $conn -> exec($sql);
+        $sql = "INSERT INTO bill (nameUser, phone, addressUser, note, totalPay, id_dish) VALUES (?, ?, ?, ?, ?, ?)";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$nameUser, $phone, $addressUser, $note, $totalPay, $id_dish]);
     }
+    
     function updatedish($id_dish,$name_dish,$price_dish,$img_dish,$address,$id_eatery,$id_catalog){
         $conn= db();
         $sql = "UPDATE dish SET name='".$name_dish."' ,price='".$price_dish."' ,img='".$img_dish."' ,address='".$address."' ,id_eatery='".$id_eatery."' ,id_catalog='".$id_catalog."' WHERE id=".$id_dish;
@@ -130,32 +132,30 @@
         $kq=$stmt->fetchAll();
         return $kq;
       }
-    // function get_address() {
-    //     $conn=db();
-    //     $sql_dia_chi = "SELECT mon_an.id, dia_chi.ten_dia_chi
-    //     FROM mon_an
-    //     JOIN dia_chi ON mon_an.dia_chi_id = dia_chi.id";
-    //     $result_dia_chi = $conn->query($sql_dia_chi);
-
-    //                     $dia_chi_array = array();
-    //             while ($row_dia_chi = $result_dia_chi->fetch_assoc()) {
-    //                 $dia_chi_array[$row_dia_chi['id']] = $row_dia_chi['ten_dia_chi'];
-    //             }
-    // }
-    function getEateryByName($name) {
-        // Kết nối CSDL
+      function bill() {
         $conn = db();
-        // Chuẩn bị câu truy vấn SQL với tham số được đặt tên
-        $sql = "SELECT * FROM eatery WHERE name = :name";
-        // Chuẩn bị và thực thi truy vấn
+        $sql = "SELECT * FROM bill ORDER BY id DESC LIMIT 1";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':name', $name);
         $stmt->execute();
-        // Lấy kết quả
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        // Đóng kết nối CSDL
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $bill = $stmt->fetchAll();
         $conn = null;
-        return $result;
+        return $bill;
     }
-    
+
+    function getone_Bill($id){
+        $conn= db();
+        $stmt = $conn->prepare("SELECT * FROM bill where id=".$id);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $dssp = $stmt->fetchAll();
+        $conn = null;
+        return $dssp;
+    }
+
+    function deleteBill($id){
+        $conn= db();
+        $sql = "DELETE FROM bill WHERE id=".$id;
+        $conn->exec($sql);
+    }
 ?>

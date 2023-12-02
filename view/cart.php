@@ -37,6 +37,7 @@
                         $thanhtien = $sp[3] * $sp[5];
                         $tong += $thanhtien;
                         $linkDel = 'index.php?page=delCart&ind='.$i;
+                        $currentProductId = $sp[0]; 
                         echo '
                             <tbody>
                                 <tr>
@@ -46,7 +47,7 @@
                                         <span class="numQuality">'.$sp[5].'</span>
                                     </td>
                                     <td><span class="total">'.number_format($thanhtien).'</span></td>
-                                    <td><button><a href="'.$linkDel.'">xoa</a></button></td>
+                                    <td><a href="'.$linkDel.'"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                             </tbody>
                             ';
@@ -113,7 +114,8 @@
                             </div>
                         </div>
                         <input type="hidden" name="totalPay" value="<?=$tong?>">
-                        <input type="hidden" name="id" value="<?=$sp[0]?>">
+                        <input type="hidden" name="status" value="1">
+                        <input type="hidden" name="id_dish" value="<?=$currentProductId?>">
                         <input type="submit" value="Đặt hàng" name="sub" class="order">
                     </div>
                 </form>

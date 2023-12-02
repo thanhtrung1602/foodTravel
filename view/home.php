@@ -216,6 +216,7 @@
                         <div class="main-products">
                             <div class="products">
                                 <ul class="product-ul middle-ul">
+<<<<<<< HEAD
                                     <?php
                                     // var_dump($dishHot);
                                     $kg="";
@@ -266,6 +267,388 @@
                                         }
                                         echo $kq;
                                     ?>
+=======
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li> 
+
+                                </ul>
+
+                            </div>
+
+                            <div class="products">
+                                <ul class="product-ul middle-ul">
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+        
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li> 
+
+                                </ul>
+
+                            </div>
+
+                            <div class="products">
+                                <ul class="product-ul middle-ul">
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li class="product-ul__item middle-item">
+                                        <div class="product-top">
+                                            <a href="">
+                                                <div class="product-img">
+                                                    <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                </div>
+                                                <div class="product-name__adress">
+                                                    <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                    <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                </div>
+                                            </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="product-ul__item middle-item">
+                                            <div class="product-top">
+                                                <a href="">
+                                                    <div class="product-img">
+                                                        <img src="layout/img/sanpham/bun-dau.jpeg" alt="product com chien" loading="lazy">
+                                                    </div>
+                                                    <div class="product-name__adress">
+                                                        <span>Bún đậu cô 3, ít bún nhiều đậu</span>
+                                                        <p>146/3 Nguyễn Văn Trỗi, P. 8, Phú Nh...</p>
+                                                    </div>
+                                                </a>
+                                                <div class="user-comment">
+                                                    <div class="comment-right">
+                                                        <div class="user-commet__name">
+                                                            <span>Nguyễn Thành Trung</span>
+                                                        </div>
+                                                        <div class="user-comment__title">
+                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-evaluate flex-box">
+                                                    <div class="evaluate flex-box">
+                                                        <div class="comment">
+                                                            <i class="fa-solid fa-message"></i>
+                                                            <span class="comment-icon">0</span>
+                                                        </div>
+                                                        <div class="like">
+                                                            <i class="fa-solid fa-thumbs-up"></i>
+                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                                            <span class="like-icon">0</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="save">
+                                                        <i class="fa-solid fa-bookmark"></i>
+                                                        <span class="bookmark-icon">Lưu</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </li> 
+>>>>>>> 7352493712187bf8d28e14d81913d78feeab23d9
 
                                 </ul>
 
