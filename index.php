@@ -24,21 +24,19 @@
                     $detail = getId($id);
                 };
                 if (isset($_POST['addbl'])&&($_POST['addbl'])) {
-                    $id_dish=$_POST['id_dish'];
                     $nameuser=$_POST['nameuser'];
                     $information=$_POST['information'];
-                    addbl($id_dish,$nameuser,$information);
+                    addbl($nameuser,$information);
                 };
                 $list=getall_bl();
 
                 $detail = getId($id);
-            if (isset($_POST['addbl']) && ($_POST['addbl'])) {
-                $id_dish = $_POST['id_dish'];
-                $nameuser = $_POST['nameuser'];
-                $information = $_POST['information'];
-                addbl($id_dish, $nameuser, $information);
-                // include_once 'view/detail.php';
-            };
+                if (isset($_POST['addbl']) && ($_POST['addbl'])) {
+                    $nameuser = $_POST['nameuser'];
+                    $information = $_POST['information'];
+                    addbl($nameuser, $information);
+                    // include_once 'view/detail.php';
+                };
             $list = getall_bl();
             $detail = getId($id);
             include_once 'view/detail.php';
@@ -164,15 +162,4 @@
         include_once "view/home.php";
 }
 include_once "view/footer.php";
-
-
-// function queryToGetResult() {
-//     $conn=db();
-//     $stmt = $conn->prepare("SELECT * FROM category");
-//     $stmt->execute();
-//     $kq=$stmt->fetchAll();
-//     return $kq;
-
-// }
-    include_once "view/footer.php";
 ?>

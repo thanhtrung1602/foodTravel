@@ -124,7 +124,6 @@
                                 <div class="inp-name">
                                 <form action="index.php?page=detail&id=<?=$id?>" method="post">
                                     <div>
-                                        <input type="hidden" name="id_dish" value="<?= $id?>">
                                         <h4>Tên khách Hàng: </h4>
                                         <input type="text" name="nameuser" class="name-cmt">
                                         <h4>Nội dung: </h4>
