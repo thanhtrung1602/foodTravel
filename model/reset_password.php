@@ -1,60 +1,34 @@
 <?php
-
-$loi = "";
-if (isset($_POST['submit']) == true) {
-    $email = $_POST['email'];
-    require "../model/connect.php";
-    $conn=db();
-    $sql = "SELECT * FROM user WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$email]);
-    $count = $stmt->rowCount();
-    if ($count == 0) {
-        $loi = "Email chưa được đăng ký";
-    } else {
-        $matkhaumoi = substr(rand(0, 999999), 0, 5);
-        $sql = "UPDATE user SET password = ? WHERE email = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$matkhaumoi, $email]);
-        guimail($email, $matkhaumoi);
+require "../model/connect.php";
+require "../model/monan.php";
+$conn = db();
+    if(session_id()=='') session_start();
+    if (isset($_SESSION['iduser']) == false ) {
+        header("location: view/sign.php");
+        exit();
     }
-}
-?>
-<?php
-    function guimail($email, $matkhaumoi) {
-        require "../view/PHPMailer-master/src/PHPMailer.php";
-        require "../view/PHPMailer-master/src/SMTP.php";
-        require "../view/PHPMailer-master/src/Exception.php";
-        $mail = new PHPMailer\PHPMailer\PHPMailer(true); //true:enables exceptions
-        try {
-            $mail->SMTPDebug = 0; //0,1,2: chế độ debug
-            $mail->isSMTP();
-            $mail->CharSet  = "utf-8";
-            $mail->Host = 'smtp.gmail.com';  //SMTP servers
-            $mail->SMTPAuth = true; // Enable authentication
-            $mail->Username = 'minhsangg0311@gmail.com'; // SMTP username
-            $mail->Password = 'zsynczfpqywrzkpm';   // SMTP password
-            $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-            $mail->Port = 465;  // port to connect to                
-            $mail->setFrom('minhsangg0311@gmail.com', 'Nguyễn Minh Sang');
-            $mail->addAddress($email);
-            $mail->isHTML(true);  // Set email format to HTML
-            $mail->Subject = 'Thư gửi lại mật khẩu';
-            $noidungthu = "Mật khẩu mới của bạn là: {$matkhaumoi}" ;
-            // $noidungthu = 'Mật khẩu mới của bạn là: ".$matkhaumoi."' ;
-            $mail->Body = $noidungthu;
-            $mail->smtpConnect(array(
-                "ssl" => array(
-                    "verify_peer" => false,
-                    "verify_peer_name" => false,
-                    "allow_self_signed" => true
-                )
-            ));
-            $mail->send();
-            echo 'Đã gửi mail xong';
-        } catch (Exception $e) {
-            // echo 'Error: skndsjfhdsjfdsjk', $mail->ErrorInfo;
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    $tendangnhap = $_SESSION['username'];
+    $loi = "";
+    if (isset($_POST['submit'])==true) {
+        $matkhaucu = $_POST['password_old'];
+        $matkhaumoi = $_POST['password_new'];
+        $matkhaumoi1 = $_POST['password_new_again'];
+        $sql = "SELECT * FROM user WHERE name = ? AND password = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$tendangnhap, $matkhaucu]);
+        if ($stmt->rowCount()==0) {$loi.= "Nhập sai mật khẩu cũ<br>";}
+        // if (!preg_match('/^[A-Za-z0-9]{4,20}$/', $matkhaumoi)) {
+        //     $_SESSION["thongbao"] = "Password chỉ chứa số và chữ không quá 20 ký tự!";
+        //     header("location:../view/register.php");
+        //     die();
+        // }
+        if (!preg_match('/^[A-Za-z0-9]{4,20}$/', $matkhaumoi)) {$loi.= "Password chỉ chứa số và chữ không quá 20 ký tự! <br>";}
+        if ($matkhaumoi!=$matkhaumoi1) {$loi.= "Nhập đúng mật khẩu cần đổi<br>";}
+        if ($loi=="") {
+            $sql = "UPDATE user SET password = ? WHERE name = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$matkhaumoi, $tendangnhap]);
+            echo "Đã cập nhật mật khẩu mới";
         }
     }
 ?>
@@ -69,7 +43,7 @@ if (isset($_POST['submit']) == true) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
-    <title>Sign</title>
+    <title></title>
 </head>
 <body>
     <div id="regsiter">
@@ -80,16 +54,29 @@ if (isset($_POST['submit']) == true) {
             <section class="form">
                 <article class="form-item">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                        <h2>Quên mật khẩu</h2>
-                        <?php if($loi !="") { ?>
-                            <div class="alert alert-danger"><?php echo $loi ?></div>
-                        <?php } ?> 
-                
+                        <h2>Đổi mật khẩu</h2>
+                        <?php if ($loi!="") {?>
+                            <div><?php echo $loi?></div>
+                        <?php }?>
                         <div class="form-user">
-                            <input type="email" name="email" id="" placeholder="Nhập email">
+                            <input type="text" value="<?php echo $tendangnhap?>" name="username" id="" placeholder="Nhập tên">
+                        </div>
+        
+                        <div class="form-pass">
+                            <input type="password" value="<?php if(isset($matkhaucu)==true )echo $matkhaucu; ?>" name="password_old" id="" placeholder="Nhập mật khẩu cũ">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        <div class="form-pass">
+                            <input type="password" value="<?php if(isset($matkhaumoi)==true )echo $matkhaumoi; ?>" name="password_new" id="" placeholder="Nhập mật khẩu mới">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        <div class="form-pass">
+                            <input type="password" value="<?php if(isset($matkhaumoi1)==true )echo $matkhaumoi1; ?>" name="password_new_again" id="" placeholder="Nhập lại mật khẩu mới">
+                            <i class="fa-solid fa-eye-slash"></i>
                         </div>
                         <div class="fogot-regsiter">
-                            <span><a href="../view/sign.php">Đăng nhập tài khoản</a></span>
+                            <span><a href="../view/sign.php">Đăng nhập tài khoản</a></span>
+                            <!-- <span><a href="../model/forget_password.php">Quên mật khẩu?</a></span> -->
                         </div>
 
                         <div class="regsiter-sub">
