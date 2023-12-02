@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./layout/assets/reset.css">
     <link rel="stylesheet" href="./layout/assets/style.css">
     <link rel="stylesheet" href="./base/responsive.css">
+    <link rel="stylesheet" href="./layout/detail/detail.css">
+    <link rel="stylesheet" href="./layout/bill/bill.css">
+    <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./base/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="layout/base/fontawesome-free-6.4.2-web/css/all.min.css">
     <title>Document</title>
 </head>
 
@@ -18,7 +21,7 @@
         <!-- Sang -->
         <header>
             <div class="header">
-                <img class="logo" src="img/logo/logo_main.png" alt="">
+                <a href="index.php?page=home"><img class="logo" src="layout/img/logo/logo_main.png" alt=""></a>
                 <div class="select-container">
                     <select name="" id="" class="select-box">
                         <option value="">Khu Vực</option>
@@ -44,20 +47,30 @@
                     <input type="text" placeholder="Địa điểm, món ăn,...">
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
+                <?php
+                    if(isset($_SESSION['username']) && ($_SESSION['username']!="")) {
+                        // echo '<a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="index.php?page=thoat"><span>Đăng xuất</span></a></div></div>';
+                    } else {
+                ?>
                 <div class="dangky">
                     <div class="text-dangky">
-                        <a href=""><span>Đăng nhập</span></a></div>
+                        <a href="view/sign.php"><span>Đăng nhập</span></a>
+                    </div>
                 </div>
+                <?php }?>
                 <div class="icon-sign-in">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="index.php?page=cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
                     <i class="fa-solid fa-bell" ></i>
                 </div>
                 <div class="hr">
                     
                 </div>
                 <div class="quoc-ki">
-                    <img src="img/logo/quoc-kyVN.png" alt="">
-                    <img src="img/logo/quoc-ki-vuong-quoc-anh.jpg" alt="">
+                    <img src="layout/img/logo/quoc-kyVN.png" alt="">
+                    <!-- <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt=""> -->
                 </div> 
             </div> 
         </header>

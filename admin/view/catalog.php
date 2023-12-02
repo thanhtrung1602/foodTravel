@@ -9,7 +9,7 @@
                     <ion-icon name="search-outline"></ion-icon>
                     <input type="text" placeholder="Tìm Kiếm">
                 </div>
-                <img src="view/layout/img/tom.jfif" alt="">
+                <img src="../layout/img/avatar-user/tom.jfif" alt="">
             </div>
         </div>
         <div class="main--wrapper">

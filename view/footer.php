@@ -1,6 +1,6 @@
 <footer>
             <div class="footer-header">
-                <img src="./img/logo/logo_main.png" alt="">
+                <img src="layout/img/logo/logo_main.png" alt="">
             </div>
             <section class="footer">
               <div class="footer-left">
@@ -68,7 +68,7 @@
                         <a href="">TRUNGDEPTRAICAP</a>
                     </li>
                     <!-- <li class="footer-item">
-                        <img src="./img/logo/pinterest_board_photo.png" alt="">
+                        <img src="layout/img/logo/pinterest_board_photo.png" alt="">
                     </li> -->
                 </ul>
               </div>
@@ -110,7 +110,7 @@
             </section>
         </footer>
     </div>
-    <script src="./layout/assets/main.js"></script>
+    <script src="layout/layout/assets/main.js"></script>
 </body>
 
 </html>

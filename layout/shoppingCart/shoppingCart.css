@@ -13,6 +13,12 @@
     --system-ui: system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
 }
 
+.invalid {
+    color: var(--invalid-color);
+    outline: var(--invalid-color);
+    border: 1px solid var(--invalid-color);
+}
+
 html {
     font-family: var(--system-ui);
 }
@@ -143,18 +149,18 @@ header{
     margin: 10px 0;
 }
 
-.nav-middle {
+.nav-middle--item {
     display: flex;
     flex-direction: column;
     margin: 20px 0 10px;
 }
 
-.nav-middle span:nth-child(1) {
+.nav-middle--item span:nth-child(1) {
     color: var(--black-color);
     font-weight: 500;
 }
 
-.nav-middle span:nth-child(2) {
+.nav-middle--item span:nth-child(2) {
     margin: 5px 0;
     color: var(--gray-color);
 }
@@ -194,15 +200,15 @@ header{
     margin-bottom: 10px;
 }
 
-.nav-bottom {
+.nav-bottom--left {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0 0 0 65%;
+    /* margin: 0 0 0 65%; */
     font-size: 18px;
 }
 
-.nav-bottom span:nth-child(2) {
+.nav-bottom--left span:nth-child(2) {
     color: var(--primary-color);
     margin: 10px 0;
 }
@@ -218,6 +224,23 @@ input {
     background-color: var(--first-color);
     border: none;
     border-radius: 5px;
+}
+.btn-right {
+    border: 1px solid;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #3FC145;
+    color: var(--white-color);
+}
+
+.btn-left {
+    border: 1px solid;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: #808080;
+    color: var(--white-color);
 }
 .sex{
     display: flex;
@@ -238,6 +261,23 @@ input {
     padding: 10px 120px 10px 15px;
 
 }
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+border: 1px solid;
+padding: 10px 40px;
+text-align: center;
+}
+
+td img {
+    width: 100%;
+    max-width: 25%;
+}
+
 .food-price span:nth-child(1){
     margin-right: 20px;
 }

@@ -166,12 +166,16 @@ header{
 
 .product-ul{
     margin: 0 10px;
+    flex-wrap: wrap;
 }
+/* .product-ul li{
+    flex-basis: 24%;
+} */
 
 .product-ul__item{
     background-color: var(--first-color);
     margin: 5px;
-    width: 25%;
+    width: 24%;
     border-radius: 10px;
     height: 55%;
 }
@@ -351,7 +355,7 @@ header{
 
 .main-nav{
     background-color: var(--first-color);
-    width: 50%;
+    width: 150%;
     height: 600px;
     margin: 5px 0;
     border-radius: 10px;
@@ -371,7 +375,7 @@ header{
 }
 
 .middle-item {
-    width: 33%;
+    width: 32%;
 }
 
 .middle-ul-item{
