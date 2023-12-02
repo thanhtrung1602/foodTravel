@@ -8,7 +8,7 @@
                 <div class="box-search">                  
                     <input  type="text"  placeholder="Tìm Kiếm">
                 </div>
-                <img src="../img/avatar-user/tom.jfif" alt="">
+                <img src="../layout/img/avatar-user/tom.jfif" alt="">
             </div>
         </div>
         <div class="main--wrapper">

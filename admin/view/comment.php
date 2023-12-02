@@ -1,4 +1,3 @@
-
 <div class="main--content">
         <div class="header--wrapper">
             <div class="header--title">
@@ -6,10 +5,9 @@
             </div>
             <div class="user--info">
                 <div class="box-search">
-                    <ion-icon name="search-outline"></ion-icon>
                     <input type="text" placeholder="Tìm Kiếm">
                 </div>
-                <img src="view/layout/img/tom.jfif" alt="">
+                <img src="../layout/img/avatar-user/tom.jfif" alt="">
             </div>
         </div>
         <div class="main--wrapper">
@@ -32,7 +30,7 @@
                                             <td>'.$id.'</td>
                                             <td>'.$nameuser.'</td>
                                             <td>'.$information.'</td>
-                                            <td><a href="index.php?pg=delbl&id='.$id.'">Xóa</a></td>
+                                            <td><a href="index.php?page=delbl&id='.$id.'">Xóa</a></td>
                                         </tr>';
                                 }
                             }    

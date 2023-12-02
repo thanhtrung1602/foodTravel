@@ -6,9 +6,8 @@
     include_once './model/comment.php';
     include_once "view/header.php";
     // include_once './model/catalog.php';
-
-    // include_once './'
-    $dssp = getall_dish();
+    $dishHot =getdishHot();
+    $dssp = getdishShow();
     $kq=getonedm();
 
     // echo var_dump($dssp);
@@ -17,7 +16,6 @@
         switch ($page) {
             case 'home':
                 include_once 'view/home.php';
-  
                 break;
             case 'detail':
                 if (isset($_GET['id']) && ($_GET['id']>0)) {

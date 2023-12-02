@@ -43,4 +43,13 @@ function getall_dm(){
   $kq=$stmt->fetchAll();
     return $kq;
 }
+function getId_catalog($id_catalog){
+  $conn = db();
+  $sql = "SELECT * FROM category WHERE id=".$id_catalog;
+  $stmt = $conn->prepare($sql);
+  $stmt->execute();
+  $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  $dssp = $stmt->fetch();
+  return $dssp;
+}
 ?>

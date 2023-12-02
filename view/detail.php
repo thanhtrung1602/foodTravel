@@ -132,7 +132,6 @@
                                         <input type="submit" name="addbl" value="Đăng">
                                     </div>
                                 </form>
-                                    
                                 </div>
                             </div>
                             <?php

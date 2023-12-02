@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="../img/logo/logo_main.png" alt="">
+            <img src="../layout/img/logo/logo_main.png" alt="">
         </div>
         <ul class="menu">
             <li>
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.php?page=Thống kê">
+                <a href="index.php?page=Thốngkê">
                     <ion-icon name="cellular-outline"></ion-icon>
                     <span>Thống kê</span>
                 </a>
