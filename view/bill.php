@@ -14,6 +14,9 @@
 <body>
     <main>
         <?php 
+        // include_once '../model/connect.php';
+        // include_once '../model/monan.php';
+        // $bill = bill();
             foreach($bill as $item) {
                 extract($item);
                     echo '
