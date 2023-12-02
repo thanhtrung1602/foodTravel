@@ -126,10 +126,10 @@
                                     <div>
                                         <input type="hidden" name="id_dish" value="<?= $id?>">
                                         <h4>Tên khách Hàng: </h4>
-                                        <input type="text" name="nameuser">
+                                        <input type="text" name="nameuser" class="name-cmt">
                                         <h4>Nội dung: </h4>
-                                        <input type="text" name="information">
-                                        <input type="submit" name="addbl" value="Đăng">
+                                        <input type="text" name="information" class="info-cmt">
+                                        <input type="submit" name="addbl" value="Đăng" class="sub-cmt">
                                     </div>
                                 </form>
                                     
@@ -164,3 +164,22 @@
                 </article>
             </section>
         </main>
+        <script>
+            const nameCmt = document.querySelector('.name-cmt');
+            const infoCmt = document.querySelector('.info-cmt');
+            const subCmt = document.querySelector('.sub-cmt');
+
+            subCmt.onclick = function () {
+                if(nameCmt.value == "") {
+                    nameCmt.focus();
+                    event.preventDefault();
+                    alert('bạn chưa nhập tên của mình')
+                } else if (infoCmt.value == "") {
+                    infoCmt.focus();
+                    event.preventDefault();
+                    alert('bạn chưa nhập thông tin bình luận')
+                } else {
+
+                }
+            }
+        </script>
