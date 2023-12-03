@@ -31,7 +31,6 @@
                     addbl($id_dish,$nameuser,$information);
                 };
                 $list=getall_bl();
-
                 $detail = getId($id);
             // if (isset($_POST['addbl']) && ($_POST['addbl'])) {
             //     $id_dish = $_POST['id_dish'];
