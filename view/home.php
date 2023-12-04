@@ -216,7 +216,7 @@
                         <div class="main-products">
                             <div class="products">
                                 <ul class="product-ul middle-ul">
-<<<<<<< HEAD
+
                                     <?php
                                     // var_dump($dishHot);
                                     $kg="";
@@ -267,7 +267,7 @@
                                         }
                                         echo $kq;
                                     ?>
-=======
+
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
