@@ -1,32 +1,33 @@
-        <!-- Trung, Huy -->
-        <div class="banner">
-            <section class="banner-section">
-                <article>
-                    <img src="layout/img/banner/banner.png" alt="bannerFoodTravel" loading="lazy">
-                </article>
-            </section>
-        </div>
-        <nav>
-            <section class="navbar">
-                <article class="navbar-article">
-                    <div class="category">
+    <div id="app"> 
+    <!-- Trung, Huy -->
+            <div class="banner">
+                <section class="banner-section">
+                    <article>
+                        <img src="layout/img/banner/banner.png" alt="bannerFoodTravel" loading="lazy">
+                    </article>
+                </section>
+            </div>
+            <nav>
+                <section class="navbar">
+                    <article class="navbar-article">
+                        <div class="category">
 
-                    <ul class="category-ul">
-                    <li class="category-ul__list">
-                                <a href="">Tất cả</a>
-                            </li>
+                        <ul class="category-ul">
+                        <li class="category-ul__list">
+                                    <a href="">Tất cả</a>
+                                </li>
 
 
-        <?php 
-            foreach ($kq as $item){
-            extract($item);
-                echo '<li class="category-ul__list">
-                <a href="">'.$tendm.'</a>
-            </li>';
-            }
-            
-        ?>
-    </ul>
+            <?php 
+                foreach ($kq as $item){
+                extract($item);
+                    echo '<li class="category-ul__list">
+                    <a href="">'.$tendm.'</a>
+                </li>';
+                }
+                
+            ?>
+        </ul>
 
 
                         <!-- <ul class="category-ul">
@@ -168,7 +169,7 @@
                         </div>
                     </div>
 
-                    <div class="heading">
+                    <!-- <div class="heading">
                         <h2>Món ăn hot</h2>
                     </div>
                     <div class="main-middle">
@@ -216,58 +217,6 @@
                         <div class="main-products">
                             <div class="products">
                                 <ul class="product-ul middle-ul">
-<<<<<<< HEAD
-                                    <?php
-                                    // var_dump($dishHot);
-                                    $kg="";
-                                    foreach ($dishHot as $dish) {
-                                            extract($dish);
-                                            $linkdetail='index.php?page=detail&id='.$id;
-                                            $kq.='<li class="product-ul__item test">
-                                                        <div class="product-top">
-                                                            <a href="'.$linkdetail.'">
-                                                                <div class="product-img">
-                                                                    <img src="layout/img/sanpham/'.$img.'" alt="product com chien" loading="lazy">
-                                                                </div>
-                                                                <div class="product-name__adress">
-                                                                    <span>'.$name.'</span>
-                                                                    <p>'.$address.'</p>
-                                                                </div>
-                                                            </a>
-                                                                <div class="user-comment">
-                                                                    
-                                                                    <div class="comment-right">
-                                                                        <div class="user-commet__name">
-                                                                            <span>Nguyễn Thành Trung</span>
-                                                                        </div>
-                                                                        <div class="user-comment__title">
-                                                                            <span>Món bún đậu này tôi thấy không đúng như là họ nói bùn nhiều mà thịt cũng nhiều</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-evaluate flex-box">
-                                                                    <div class="evaluate flex-box">
-                                                                        <div class="comment">
-                                                                            <i class="fa-solid fa-message"></i>
-                                                                            <span class="comment-icon">0</span>
-                                                                        </div>
-                                                                        <div class="like">
-                                                                            <i class="fa-solid fa-thumbs-up"></i>
-                                                                            <i class="bi bi-hand-thumbs-up-fill"></i>
-                                                                            <span class="like-icon">0</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="save">
-                                                                        <i class="fa-solid fa-bookmark"></i>
-                                                                        <span class="bookmark-icon">Lưu</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                    </li>';
-                                        }
-                                        echo $kq;
-                                    ?>
-=======
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -648,13 +597,13 @@
                                                 </div>
                                             </div>
                                     </li> 
->>>>>>> 7352493712187bf8d28e14d81913d78feeab23d9
+
 
                                 </ul>
 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="heading-2">
                         <h2>Tin tức món ăn trending</h2>
@@ -706,3 +655,4 @@
             </section>
         </main>
         <!-- Tuan -->
+    </div>

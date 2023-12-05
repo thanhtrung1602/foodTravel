@@ -6,7 +6,6 @@
     include_once './model/monan.php';
     include_once './model/comment.php';
     include_once "view/header.php";
-    // include_once './model/catalog.php';
     $dishHot =getdishHot();
     $dssp = getdishShow();
     $dssp = getall_dish();
@@ -25,23 +24,14 @@
                     $detail = getId($id);
                 };
                 if (isset($_POST['addbl'])&&($_POST['addbl'])) {
-                    $id_dish=$_POST['id_dish'];
+                    // $id_dish=$_POST['id_dish'];
                     $nameuser=$_POST['nameuser'];
                     $information=$_POST['information'];
-                    addbl($id_dish,$nameuser,$information);
+                    addbl($nameuser,$information);
                 };
                 $list=getall_bl();
 
                 $detail = getId($id);
-            // if (isset($_POST['addbl']) && ($_POST['addbl'])) {
-            //     $id_dish = $_POST['id_dish'];
-            //     $nameuser = $_POST['nameuser'];
-            //     $information = $_POST['information'];
-            //     addbl($id_dish, $nameuser, $information);
-            //     // include_once 'view/detail.php';
-            // };
-            // $list = getall_bl();
-            // $detail = getId($id);
             include_once 'view/detail.php';
             break;
         case 'delCart':
@@ -81,23 +71,16 @@
                 }
             include_once 'view/cart.php';
             break;
-        case 'sign':
-            include_once 'view/sign.php';
-            break;
-        // case 'update_user':
-        //     include_once 'view/update_user.php';
-        //     break;
-        case 'thoat':
-            unset($_SESSION['role']);
-            unset($_SESSION['iduser']);
-            unset($_SESSION['username']);
-            header("location: index.php");
-            break;
-                    header('location:index.php?page=cart');
-                
-                // include_once 'view/cart.php';
-                
+            case 'sign':
+                include_once 'view/sign.php';
                 break;
+
+            case 'thoat':
+                unset($_SESSION['role']);
+                unset($_SESSION['iduser']);
+                unset($_SESSION['username']);
+                header("location: index.php");
+            break;
             case 'addBill': 
                 if (isset($_POST['sub']) && (isset($_POST['sub']))) {
                     $nameUser = $_POST['nameUser'];
@@ -110,8 +93,7 @@
                     addBill($nameUser, $phone, $addressUser, $note, $totalPay, $id_dish);
                     header('location:index.php?page=bill');
                 }
-                // $dssp = getall_dish(1); 
-                break;
+            break;
             case 'sign':
                 include_once 'view/sign.php';
                 break;
@@ -130,8 +112,6 @@
                 $dssp = getall_dish();
                 include_once "view/home.php";
                 break;
-
-        
             }
     }else{
         include_once "view/home.php";

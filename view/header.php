@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./layout/assets/reset.css">
     <link rel="stylesheet" href="./layout/assets/style.css">
-    <link rel="stylesheet" href="./base/responsive.css">
+    <link rel="stylesheet" href="./layout/base/responsive.css">
     <link rel="stylesheet" href="./layout/detail/detail.css">
     <link rel="stylesheet" href="./layout/bill/bill.css">
     <link rel="stylesheet" href="./layout/shoppingCart/shoppingCart.css">
