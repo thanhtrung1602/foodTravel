@@ -30,7 +30,6 @@
                     addbl($nameuser,$information);
                 };
                 $list=getall_bl();
-
                 $detail = getId($id);
             include_once 'view/detail.php';
             break;

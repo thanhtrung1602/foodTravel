@@ -203,8 +203,16 @@ tbody tr td ion-icon{
 table .uppdate tr input{
     width: 300px;
 }
-th select{
-    width: 100%;
+/* th select{
+    width: 50%;
+    height: 34px;
+    border-radius: 20px;
+    background-color:rgb(151, 154, 154);
+    color: white;
+    text-align: center;
+} */
+select{
+    width: 31%;
     height: 34px;
     border-radius: 20px;
     background-color:rgb(151, 154, 154);
