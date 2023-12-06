@@ -159,7 +159,7 @@ table{
 thead{
     background-color: rgba(68, 68, 68, 0.986);
     color: white;
-    text-align: center;
+    padding: 100px;
 }
 th{
     padding: 8px;
