@@ -4,9 +4,13 @@
 }
 /* ipad */
 @media screen and (min-width: 740px) and (max-width: 1023px){
-    
+    #app {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 /* laptop */
 @media screen and (min-width: 1024px){
-    
+    #app {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

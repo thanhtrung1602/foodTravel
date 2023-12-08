@@ -30,7 +30,7 @@
                             </div>
     
                             <div class="nav-bottom">
-                                <form action="index.php?page=addCart" method="post">
+                                <form action="index.php?page=addCart" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="id" value="<?=$id?>">
                                     <input type="hidden" name="img" id="" value="<?=$img?>">
                                     <input type="hidden" name="name" id="" value="<?=$name?>">
@@ -124,7 +124,7 @@
                                 <div class="inp-name">
                                 <form action="index.php?page=detail&id=<?=$id?>" method="post">
                                     <div>
-                                        <input type="hidden" name="id_dish" value="<?= $id?>">
+                                        <!-- <input type="hidden" name="id_dish" value="<?= $id?>"> -->
                                         <h4>Tên khách Hàng: </h4>
                                         <input type="text" name="nameuser" class="name-cmt">
                                         <h4>Nội dung: </h4>
@@ -163,6 +163,9 @@
                 </article>
             </section>
         </main>
+        <?php 
+            ob_end_flush();
+        ?>
         <script>
             const nameCmt = document.querySelector('.name-cmt');
             const infoCmt = document.querySelector('.info-cmt');
@@ -177,8 +180,6 @@
                     infoCmt.focus();
                     event.preventDefault();
                     alert('bạn chưa nhập thông tin bình luận')
-                } else {
-
                 }
             }
         </script>

@@ -5,6 +5,7 @@
     include_once "../model/monan.php";
     include_once "../model/comment.php";
     include_once "../model/catalog.php";
+    include_once "../model/user.php";
     include_once "view/header.php";
    
 
@@ -22,6 +23,8 @@
                     $id=$_GET['id'];
                     deldish($id);
                 }
+                $getalleatery =getall_eatery();  
+                $getallcatalog = getall_dm();
                 $kq=getall_dish();
                 include_once "view/dish.php";
                 break;
@@ -46,6 +49,8 @@
                     $id=$_GET['id'];
                     $kqgetone=getone_dish($id);
                     $kq=getall_dish();
+                    $getalleatery =getall_eatery();  
+                    $getallcatalog = getall_dm();
                     include_once "view/updatedish.php";
                 }
                 if (isset($_POST['id_dish'])) {
@@ -62,7 +67,6 @@
                     $getallcatalog = getall_dm();
                     include_once "view/dish.php";
                 }
-                
                 break;
             case 'comment':
                 $kq=getall_bl();
@@ -76,7 +80,18 @@
                 $kq=getall_bl();
                 include_once "view/comment.php";
                 break;
-
+            case 'user':
+                $kq=getall_user();
+                include_once "view/user.php";
+                break;
+            case 'deluser':
+                if (isset($_GET['id'])) {
+                    $id=$_GET['id'];
+                    deluser($id);
+                }
+                $kq=getall_user();
+                include_once "view/user.php";
+                break;
             case 'catalog':
                 $kq=getall_dm();
 

@@ -13,54 +13,10 @@
 </head>
 <body>
     <main>
-        <div class="bill-food">
-            <div class="top-header">
-                <span><i class="fa-solid fa-bag-shopping"></i></span>
-                <span>ĐẶT HÀNG THÀNH CÔNG</span>
-            </div>
-    
-            <div class="top-next">
-                Cảm ơn anh <strong class="bold-text">Trung</strong> đã cho Travelfood được phục vụ
-            </div>
-            
-            <div class="middle-top">
-                <div class="head-middle">
-                    <span>Đơn hàng: </span>
-                    <span>Quản lý đơn hàng | <a href="">Hủy</a></span>
-                </div>
-    
-                <div class="mid-middle">
-                    <span class="bold-text">Người nhận hàng: </span>
-                    <span>Anh Trung, 0822930906</span>
-                </div>
-    
-                <div class="address-middle">
-                    <span class="bold-text">Giao đến: </span>
-                    <span>Thôn Tân Sơn, Xã Eadrong, Huyện CưMgar, Đăk Lăk</span>
-                </div>
-    
-                <div class="foo-middle">
-                    <span class="bold-text">Tổng tiền: </span>
-                    <span class="total-bill">100</span>
-                </div>
-            </div>
-    
-            <div class="footer-mid">
-                <span>Đơn hàng chưa được thanh toán</span>
-            </div>
-    
-            <div class="footer-bill">
-                <h2>Chọn hình thức thanh toán: </h2>
-                <div class="pay-bill">
-                    <input type="radio" name="" id=""> <label for=""> <i class="fa-solid fa-money-bill"></i> Thanh toán tiền mặt khi nhận hàng</label>
-                </div>
-            </div>
-    
-            <input type="submit" value="XÁC NHẬN" class="sub-bill">
-        </div>
-    </main>
-    <!-- <main>
         <?php 
+        // include_once '../model/connect.php';
+        // include_once '../model/monan.php';
+        // $bill = bill();
             foreach($bill as $item) {
                 extract($item);
                     echo '
@@ -147,7 +103,40 @@
                     ';
             }
         ?>
-    </main> -->
+    </main>
 
 </body>
+    <script>
+        const checkedBoxs = document.querySelectorAll('input[type="checkbox"]');
+        const subCheck = document.querySelector('.send-del--bill');
+        const closeBill =  document.querySelector('.close-bill')
+        const delbill = document.querySelector('.del-bill');
+        const cancelBill = document.querySelector('.cancel-bill');
+        const subBill = document.querySelector('.sub-bill');
+        const successBill = document.querySelector('.successBill')
+        // xử lý mở success 
+        subBill.onclick = function () {
+            successBill.style.display = 'block';
+        }
+        //xử lý bật boxcheck 
+        cancelBill.onclick = function () {
+            delbill.style.display = 'block';
+            event.preventDefault();
+        }
+        // xử lý click boxcheck
+        console.log(checkedBoxs)
+        checkedBoxs.forEach(function (checkedBox) {
+            console.log(this)
+            checkedBox.onclick = function () {
+                const atLeastOneChecked = [...checkedBoxs].some(function (box) {
+                    return box.checked;
+                })
+                subCheck.style.display = atLeastOneChecked ? 'block' : 'none';
+            }
+        })
+        // xử lý đóng box
+        closeBill.onclick = function () {
+            delbill.style.display = 'none'
+        }
+    </script>
 </html>
