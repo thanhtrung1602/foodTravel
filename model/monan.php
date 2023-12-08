@@ -124,6 +124,21 @@
         $kq = $stmt->fetchAll();
         return $kq;
     }
+    // function getUser($fullname, $password) {
+    //     $conn = db();
+    //     $sql = "SELECT * FROM user WHERE name='".$fullname."' AND password='".$password."'";
+    //     $stmt = $conn->prepare($sql);
+    //     $stmt->execute();
+    //     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    //     $dssp = $stmt->fetch();
+    //     $conn = null;
+    //     return $dssp;
+    // }
+    // function update_user($username, $sdt, $email, $role, $id) {
+    //     $conn=db();
+    //     $sql = "UPDATE user SET name=?, sdt=?, email=? ,$role=? WHERE id=?";
+    //     pdo_excute($sql, $username, $sdt, $email, $role, $id);
+    // }
     function getonedm(){
         $conn=db();
         $stmt = $conn->prepare("SELECT * FROM category ORDER BY id DESC");

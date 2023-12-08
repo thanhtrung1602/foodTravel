@@ -50,7 +50,7 @@
                 <?php
                     if(isset($_SESSION['username']) && ($_SESSION['username']!="")) {
                         // echo '<a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a>';
-                        echo '<div class="dangky"><div class="text-dangky"><a href="view/update_user.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
+                        echo '<div class="dangky"><div class="text-dangky"><a href="model/forget_password.php"><span>'.$_SESSION['username'].'</span></a></div></div>';
                         echo '<div class="dangky"><div class="text-dangky"><a href="index.php?page=thoat"><span>Đăng xuất</span></a></div></div>';
                     } else {
                 ?>

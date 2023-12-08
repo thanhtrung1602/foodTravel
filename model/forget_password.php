@@ -51,7 +51,7 @@ if (isset($_POST['submit']) == true) {
                 )
             ));
             $mail->send();
-            echo 'Đã gửi mail xong';
+            echo "Mật khẩu mới đã được gửi tới email $email";
         } catch (Exception $e) {
             // echo 'Error: skndsjfhdsjfdsjk', $mail->ErrorInfo;
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
@@ -90,10 +90,12 @@ if (isset($_POST['submit']) == true) {
                         </div>
                         <div class="fogot-regsiter">
                             <span><a href="../view/sign.php">Đăng nhập tài khoản</a></span>
+                            <span><a href="../model/reset_password.php">Đổi mật khẩu</a></span>
                         </div>
 
                         <div class="regsiter-sub">
-                            <input type="submit" value="Đổi mật khẩu" name="submit" id="">
+                            <input type="submit" value="Nhận mật khẩu" name="submit" id="">
+                            <!-- <span><a href="../model/reset_password.php">Đổi mật khẩu</a></span> -->
                         </div>
                     </form>
         

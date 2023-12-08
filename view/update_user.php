@@ -1,28 +1,19 @@
-<?php
-// session_start();
-// ob_start();
+<!-- <?php
 // require "../model/connect.php";
-// if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != '' &&  $_POST['sdt'] != '') {
-//     $username = $_POST['username'];
-//     $email = $_POST['email'];
-//     $sdt = $_POST['sdt'];
-//     $conn = db();
-//     $stmt = $conn->prepare('UPDATE user SET name = ?, sdt =?, email =?');
-//     $stmt->bindParam(1, $username);
-//     $stmt->bindParam(2, $sdt);
-//     $stmt->bindParam(3, $email);
-//     $stmt->execute();
-//     // $password  = password_hash($_POST['password'],PASSWORD_DEFAULT);
-//     $_SESSION["thongbao"] = "Bạn vừa cập nhật tài khoản thành công!";
-//     include_once 'sign.php';
-// } else {
-//     $_SESSION["thongbao"] = "Vui lòng nhập đầy đủ thông tin!";
-//     // header("location: ./update_user.php");
-//     include_once 'update_user.php';
+// require "../model/monan.php";
+// if (isset($_SESSION['username']) && (count($_SESSION['username']) > 0)) {
+//     extract($_SESSION['username']);
 // }
-// $conn = null;
+// if (isset($_POST['submit']) && ($_POST['submit'])) {
+//     $username = $_POST['username'];
+//     $sdt = $_POST['sdt'];
+//     $email = $_POST['email'];
+//     $id = $_POST['id'];
+//     $role = 0;
+//     update_user($username, $sdt, $email, $role, $id);
+// }
 ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,27 +38,26 @@
                 <article class="form-item">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <h2>Cập nhật tài khoản</h2>
-                        <?php
-                        if (isset($_SESSION["thongbao"])) {
-                            echo $_SESSION["thongbao"];
-                            // session_unset($_SESSION["thongbao"]);
-                        }
-                        ?>
+                        <?php if ($loi!="") {?>
+                            <div><?php echo $loi?></div>
+                        <?php }?>
                         <div class="form-user">
-                            <input type="text" name="username" id="" placeholder="Họ và tên">
+                            <input type="text" value="" name="hotenmoi" id="" placeholder="Họ và tên">
                         </div>
                         <div class="form-phone">
-                            <input type="text" name="sdt" id="" placeholder="Số điện thoại">
+                            <input type="text" value="" name="sdtmoi" id="" placeholder="Số điện thoại">
                         </div>
                         <div class="form-phone">
-                            <input type="email" name="email" id="" placeholder="Email">
+                            <input type="email" value="" name="emailmoi" id="" placeholder="Email">
                         </div>
 
                         <div class="fogot-regsiter">
-                            <span><a href="./register.php">Tạo tài khoản</a></span> -->
+                             <span><a href="./register.php">Tạo tài khoản</a></span> -->
+
                             <!-- <span><a href="../model/reset_password.php">Đổi mật khẩu</a></span>
                         </div>
                         <div class="regsiter-sub">
+                            <input type="hidden" name="id" value="">
                             <input type="submit" value="Cập nhật" name="submit" id="">
                         </div>
                     </form>
@@ -81,4 +71,4 @@
     </div>
 </body>
 
-</html> --> 
+</html> -->

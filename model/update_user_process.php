@@ -1,23 +1,34 @@
-<?php
-// session_start();
-// ob_start();
-// require "../model/connect.php";
-// if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != '' &&  $_POST['sdt'] != '') {
-//     $username = $_POST['username'];
-//     $email = $_POST['email'];
-//     $sdt = $_POST['sdt'];
-//     $conn = db();
-//     $stmt = $conn->prepare('UPDATE user SET name = ?, sdt =?, email =?');
-//     $stmt->bindParam(1, $username);
-//     $stmt->bindParam(2, $sdt);
-//     $stmt->bindParam(3, $email);
-//     $stmt->execute();
-//     // $password  = password_hash($_POST['password'],PASSWORD_DEFAULT);
-//     $_SESSION["thongbao"] = "Bạn vừa cập nhật tài khoản thành công!";
-//     header("location: ../view/sign.php");
-// } else {
-//     $_SESSION["thongbao"] = "Vui lòng nhập đầy đủ thông tin!";
-//     header("location:../model/update_user.php");
-// }
-// $conn = null;
-?>
+<!-- <?php
+require "../model/connect.php";
+require "../model/monan.php";
+$conn = db();
+    if(session_id()=='') session_start();
+    if (isset($_SESSION['iduser']) == false ) {
+        header("location: view/sign.php");
+        exit();
+    }
+    $tendangnhap = $_SESSION['username'];
+    $loi = "";
+    if (isset($_POST['submit'])==true) {
+        $hotenmoi = $_POST['hotenmoi'];
+        $sdtmoi = $_POST['sdtmoi'];
+        $emailmoi = $_POST['emailmoi'];
+        $sql = "SELECT * FROM user WHERE name = ? AND sdt = ? AND email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$hotenmoi, $sdtmoi, $emailmoi]);
+        // if ($stmt->rowCount()==0) {$loi.= "Nhập sai mật khẩu cũ<br>";}
+        // if (!preg_match('/^[A-Za-z0-9]{4,20}$/', $matkhaumoi)) {
+        //     $_SESSION["thongbao"] = "Password chỉ chứa số và chữ không quá 20 ký tự!";
+        //     header("location:../view/register.php");
+        //     die();
+        // }
+        // if (!preg_match('/^[A-Za-z0-9]{4,20}$/', $hotenmoi)) {$loi.= "Password chỉ chứa số và chữ không quá 20 ký tự! <br>";}
+        // if ($matkhaumoi!=$matkhaumoi1) {$loi.= "Nhập đúng mật khẩu cần đổi<br>";}
+        if ($loi=="") {
+            $sql = "UPDATE user SET name = ? AND sdt = ? AND email = ? WHERE name = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$hotenmoi, $sdtmoi, $emailmoi]);
+            echo "Đã cập nhật thông tin mới";
+        }
+    }
+?> -->

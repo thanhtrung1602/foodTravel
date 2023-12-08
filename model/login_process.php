@@ -11,14 +11,31 @@ if (isset($_POST['submit']) && ($_POST['submit']) && ($_POST['username']) != "" 
     if ($role == 1) {
         $_SESSION['role'] = $role;
         header("location: ../admin/index.php");
-    } 
-    else {
+    } elseif ($role == 0) {
         $_SESSION['role'] = $role;
         $_SESSION['iduser'] = $kq[0]['id'];
         $_SESSION['username'] = $kq[0]['name'];
         header("location: ../index.php");
-    }
+    } 
 } else {
     header("location: ../view/sign.php");
     $_SESSION['thongbao'] = "Vui lòng nhập thông tin!";
 }
+// if (isset($_POST['submit']) && ($_POST['submit'])) {
+//     $fullname = $_POST['username'];
+//     $pass = $_POST['password'];
+//     $total = getUser($fullname, $pass);
+//     if ($total) {
+//         if ($total['role_id']==1) {
+//             header('location: admin/index.php');
+//         }else {
+//             $_SESSION['username'] = $total['name'];
+//             header('location: index.php');
+//         }
+//     } else {
+//         $thongbao = "sai thong tin dang nhap ";
+//     }
+// } else {
+//     header('location: ./view/sign.php');
+// }
+// require_once './view/sign.php';

@@ -216,9 +216,8 @@
                         <div class="main-products">
                             <div class="products">
                                 <ul class="product-ul middle-ul">
-<<<<<<< HEAD
                                     <?php
-                                    // var_dump($dishHot);
+                                   // var_dump($dishHot);
                                     $kg="";
                                     foreach ($dishHot as $dish) {
                                             extract($dish);
@@ -267,7 +266,6 @@
                                         }
                                         echo $kq;
                                     ?>
-=======
                                     <li class="product-ul__item middle-item">
                                         <div class="product-top">
                                             <a href="">
@@ -648,7 +646,6 @@
                                                 </div>
                                             </div>
                                     </li> 
->>>>>>> 7352493712187bf8d28e14d81913d78feeab23d9
 
                                 </ul>
 
