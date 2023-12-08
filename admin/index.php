@@ -89,6 +89,7 @@
                     $tendm=$_POST['tendm'];
                     themdm($tendm);
                 }
+                
                 $kq=getall_dm();
 
                     include_once "view/catalog.php";

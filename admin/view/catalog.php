@@ -23,7 +23,7 @@
                     <tr>
             <th>STT</th>
             <th>Tên danh mục</th>
-            <th>Ưu tiên</th>
+            <th>Hành động</th>
             
         </tr>
                     </thead>
