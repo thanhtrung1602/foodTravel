@@ -89,21 +89,6 @@
                                                             </div>
                                                         </div>
                                                         <div class="product-evaluate flex-box">
-                                                            <div class="evaluate flex-box">
-                                                                <div class="comment">
-                                                                    <i class="fa-solid fa-message"></i>
-                                                                    <span class="comment-icon">0</span>
-                                                                </div>
-                                                                <div class="like">
-                                                                    <i class="fa-solid fa-thumbs-up"></i>
-                                                                    <!-- <i class="bi bi-hand-thumbs-up-fill"></i> -->
-                                                                    <span class="like-icon"><span class="numLike">0</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="save">
-                                                                <i class="fa-solid fa-bookmark"></i>
-                                                                <span class="bookmark-icon">Lưu</span>
-                                                            </div>
                                                         </div>
                                                     </div>
                                             </li>';

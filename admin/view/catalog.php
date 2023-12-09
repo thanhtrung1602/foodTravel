@@ -18,14 +18,13 @@
         <input type="text" name="tendm" id="">
         <input type="submit" name="themmoi" value="Thêm mới">
     </form>
-                <table>     
+                <table  id="example" class="table table-striped" style="width:100%">     
                     <thead>
                     <tr>
             <th>STT</th>
             <th>Tên danh mục</th>
-            <th>Ưu tiên</th>
-            <th>Hiển thị</th>
             <th>Hành động</th>
+            
         </tr>
                     </thead>
                     <tbody>
@@ -36,9 +35,10 @@
                                     echo '<tr>
                                         <td>'.$i.'</td>
                                         <td>'.$dm['tendm'].'</td>
-                                        <td>'.$dm['uutien'].'</td>
-                                        <td>'.$dm['hienthi'].'</td>
-                                        <td><a href="index.php?page=updatedmform&id='.$dm['id'].'">Sửa</a>|<a href="index.php?page=deletedm&id='.$dm['id'].'">Xóa</a></td>
+                                        <td>
+                                        <a href=" index.php?page=updatedmform&id='.$dm['id'].'" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
+                                        <a href=" index.php?page=deletedm&id='.$dm['id'].'" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                                    </td> 
                                     </tr>';
                                 $i++;
                                 }
@@ -51,5 +51,9 @@
             </tbody> 
         </div>
     </div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        new DataTable('#example');
+    </script>
 </body>
 </html>

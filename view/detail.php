@@ -170,16 +170,31 @@
             const nameCmt = document.querySelector('.name-cmt');
             const infoCmt = document.querySelector('.info-cmt');
             const subCmt = document.querySelector('.sub-cmt');
+            const urlPattern = /^(https?:\/\/|www\.)|^(http:\/\/|https:\/\/|www\.)$/;
 
-            subCmt.onclick = function () {
-                if(nameCmt.value == "") {
+            subCmt.onclick = function (event) {
+                if (nameCmt.value == "") {
                     nameCmt.focus();
                     event.preventDefault();
-                    alert('bạn chưa nhập tên của mình')
+                    alert('Bạn chưa nhập tên của mình');
+                    return false;
+                } else if (urlPattern.test(nameCmt.value)) {
+                    nameCmt.focus();
+                    event.preventDefault();
+                    alert('Bạn không thể nhập link của mình vào được');
+                    return false;
                 } else if (infoCmt.value == "") {
                     infoCmt.focus();
                     event.preventDefault();
-                    alert('bạn chưa nhập thông tin bình luận')
+                    alert('Bạn chưa nhập thông tin bình luận');
+                    return false;
+                } else if (urlPattern.test(infoCmt.value)) {
+                    infoCmt.focus();
+                    event.preventDefault();
+                    alert('Bạn không thể nhập link vào được');
+                    return false;
                 }
-            }
+                return true;
+            };
+
         </script>

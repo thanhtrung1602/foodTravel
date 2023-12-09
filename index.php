@@ -33,15 +33,6 @@
                 $detail = getId($id);
             include_once 'view/detail.php';
             break;
-        case 'delCart':
-            if (isset($_GET['ind']) && ($_GET['ind'] >= 0)) {
-                array_splice($_SESSION['cart'], $_GET['ind'], 1);
-                header('location:index.php?page=cart');
-            }
-            break;
-        case 'cart':
-            include_once 'view/cart.php';
-            break;
             case 'delCart':
                 if (isset($_GET['ind']) && ($_GET['ind']>= 0)) {
                     array_splice($_SESSION['cart'], $_GET['ind'],1);

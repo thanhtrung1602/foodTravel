@@ -1,16 +1,35 @@
 /* điện thoại */
 @media screen and (max-width: 739px){
-    
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .select-container  {
+        display: none;
+    }
+    .select-container{
+        display: none;
+    }
+    .box-food-hot {
+        display: none;
+    }
+    .input-seach {
+        display: none;
+    }
+    .dangky {
+        display: none;
+    }
+    .quoc-ki{
+        display: none;
+    }
 }
 /* ipad */
 @media screen and (min-width: 740px) and (max-width: 1023px){
-    #app {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
 }
 /* laptop */
 @media screen and (min-width: 1024px){
-    #app {
-        grid-template-columns: repeat(1, 1fr);
+    .bard-head {
+        display: none;
     }
 }
