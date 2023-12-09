@@ -1,32 +1,33 @@
-        <!-- Trung, Huy -->
-        <div class="banner">
-            <section class="banner-section">
-                <article>
-                    <img src="layout/img/banner/banner.png" alt="bannerFoodTravel" loading="lazy">
-                </article>
-            </section>
-        </div>
-        <nav>
-            <section class="navbar">
-                <article class="navbar-article">
-                    <div class="category">
+    <div id="app"> 
+    <!-- Trung, Huy -->
+            <div class="banner">
+                <section class="banner-section">
+                    <article>
+                        <img src="layout/img/banner/banner.png" alt="bannerFoodTravel" loading="lazy">
+                    </article>
+                </section>
+            </div>
+            <nav>
+                <section class="navbar">
+                    <article class="navbar-article">
+                        <div class="category">
 
-                    <ul class="category-ul">
-                    <li class="category-ul__list">
-                                <a href="">Tất cả</a>
-                            </li>
+                        <ul class="category-ul">
+                        <li class="category-ul__list">
+                                    <a href="">Tất cả</a>
+                                </li>
 
 
-        <?php 
-            foreach ($kq as $item){
-            extract($item);
-                echo '<li class="category-ul__list">
-                <a href="">'.$tendm.'</a>
-            </li>';
-            }
-            
-        ?>
-    </ul>
+            <?php 
+                foreach ($kq as $item){
+                extract($item);
+                    echo '<li class="category-ul__list">
+                    <a href="">'.$tendm.'</a>
+                </li>';
+                }
+                
+            ?>
+        </ul>
 
 
                         <!-- <ul class="category-ul">
@@ -653,6 +654,8 @@
                         </div>
                     </div>
 
+=======
+>>>>>>> 9815c4497d5c7b37a2b460b3c20660ca778c0cf4
                     <div class="heading-2">
                         <h2>Tin tức món ăn trending</h2>
                     </div>
@@ -703,3 +706,4 @@
             </section>
         </main>
         <!-- Tuan -->
+    </div>

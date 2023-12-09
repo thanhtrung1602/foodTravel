@@ -8,6 +8,13 @@ if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != ''
     $sdt = $_POST['sdt'];
     // $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $password = $_POST['password'];
+    // $conn = db();
+    // $stmt = $conn->prepare('SELECT * FROM user (name) values (?)');
+    // $stmt->bindParam(1, $username);
+    // if ($username==$stmt) {
+    //     echo "username đã tồn tại";
+    // }
+
     if (!preg_match('/^[A-Za-z0-9]{4,20}$/', $username)) {
         $_SESSION["thongbao"] = "Username chỉ chứa số và chữ không quá 20 ký tự!";
         header("location:../view/register.php");
@@ -23,7 +30,7 @@ if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != ''
         header("location:../view/register.php");
         die();
     }
-    $conn=db();     
+    $conn = db();
     $stmt = $conn->prepare('INSERT INTO user (name, sdt, email, password) values (?, ?, ?, ?)');
     $stmt->bindParam(1, $username);
     $stmt->bindParam(2, $sdt);
@@ -33,7 +40,6 @@ if (isset($_POST['submit']) && $_POST['username'] != '' && $_POST['email'] != ''
     // $password  = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $_SESSION["thongbao"] = "Bạn vừa đăng ký tài khoản thành công!";
     header("location: ../view/sign.php");
-
 } else {
     $_SESSION["thongbao"] = "Vui lòng nhập đầy đủ thông tin!";
     header("location:../view/register.php");
