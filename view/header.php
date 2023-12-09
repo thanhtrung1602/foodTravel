@@ -72,5 +72,8 @@
                     <img src="layout/img/logo/quoc-kyVN.png" alt="">
                     <!-- <img src="layout/img/logo/quoc-ki-vuong-quoc-anh.jpg" alt=""> -->
                 </div> 
+                <div class="bard-head">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div> 
         </header>

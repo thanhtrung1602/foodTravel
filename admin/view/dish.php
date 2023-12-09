@@ -29,15 +29,15 @@
                         
                             <form action="index.php?page=adddish" method="post">
                                 <tr><th><h4>Mã: </h4>
-                                    <input type="text" name="id_dish"></th>                              
+                                    <input type="text" name="id_dish" class="id-dish"></th>                              
                                     <th> <h4>Tên: </h4>
-                                    <input type="text" name="name_dish"> </th>
+                                    <input type="text" name="name_dish" class="name-dish"> </th>
                                     <th><h4>Giá: </h4>
-                                    <input type="text" name="price_dish"></th>
+                                    <input type="text" name="price_dish" class="price-dish"></th>
                                     <th><h4>Hình: </h4>
-                                    <input type="file" name="img_dish"> <br></th></tr>
+                                    <input type="file" name="img_dish" class="img-dish"> <br></th></tr>
                                 <tr><th><h4>Địa chỉ: </h4>
-                                    <input type="text" name="address"></th>
+                                    <input type="text" name="address" class="address-dish"></th>
                                     <th><h4>Tên quán</h4>
                                     <select name="id_eatery">
                                         <?= $nameeatery ?>
@@ -49,7 +49,7 @@
                                     </select>
                                     <!-- <input type="text" name="id_catalog"></th> -->
                                     <th><h4>Thêm: </h4>
-                                    <input type="submit" name="adddish" value="Thêm"></th></th>    </tr> 
+                                    <input type="submit" name="adddish" value="Thêm" class="addPrd"></th></th>    </tr> 
                             </form>
                         
                     </thead>
@@ -93,4 +93,43 @@
         </div>
     </div>
 </body>
+    <script>
+        const add = document.querySelector('.addPrd');
+        const idDish = document.querySelector('id-dish')
+        const nameDish = document.querySelector('name-dish')
+        const priceDish = document.querySelector('price-dish')
+        const imgDish = document.querySelector('img-dish')
+        const addressDish = document.querySelector('address-dish')
+        add.onclick = function () {
+            console.log(this)
+            if (idDish.value == "") {
+                idDish.focus();
+                event.preventDefault();
+                alert('Bạn chưa nhập id sản phẩm');
+                return false
+            } else if (nameDish.value == "") {
+                nameDish.focus();
+                event.preventDefault();
+                alert('Bạn chưa nhập tên sản phẩm');
+                return false;
+            } else if (priceDish.value == "") {
+                priceDish.focus();
+                event.preventDefault();
+                alert('Bạn chưa nhập tên sản phẩm');
+                return false
+            } else if (imgDish.value == "") {
+                event.preventDefault();
+                alert('Bạn chưa chọn file ảnh');
+                return false;
+            } else if (addressDish.value == "") {
+                addressDish.focus()
+                event.preventDefault();
+                alert('Bạn chưa nhập địa chỉ sản phẩm');
+                return false
+            }
+            alert('Bạn đã thêm sản phẩm thành công')
+            
+            return true
+        }
+    </script>
 </html>
