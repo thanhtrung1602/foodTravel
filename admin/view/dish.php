@@ -95,19 +95,21 @@
 </body>
     <script>
         const add = document.querySelector('.addPrd');
-        const idDish = document.querySelector('id-dish')
-        const nameDish = document.querySelector('name-dish')
-        const priceDish = document.querySelector('price-dish')
-        const imgDish = document.querySelector('img-dish')
-        const addressDish = document.querySelector('address-dish')
+        const idDish = document.querySelector('.id-dish')
+        const nameDish = document.querySelector('.name-dish')
+        const priceDish = document.querySelector('.price-dish')
+        const imgDish = document.querySelector('.img-dish')
+        const addressDish = document.querySelector('.address-dish')
         add.onclick = function () {
             console.log(this)
+            // event.preventDefault();
             if (idDish.value == "") {
-                idDish.focus();
                 event.preventDefault();
+                idDish.focus();
                 alert('Bạn chưa nhập id sản phẩm');
                 return false
-            } else if (nameDish.value == "") {
+            } 
+            else if (nameDish.value == "") {
                 nameDish.focus();
                 event.preventDefault();
                 alert('Bạn chưa nhập tên sản phẩm');
